@@ -6,6 +6,9 @@
     "personal-page": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -27,8 +30,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/sass/variables.scss",
+              "src/sass/styles.scss",
+              "src/sass/index.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/sass"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
