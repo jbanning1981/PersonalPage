@@ -7,14 +7,13 @@ import { AppComponent } from './app.component';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { PageContentComponent } from './page-content/page-content.component';
-import { PageContentNavComponent } from './page-content/page-content-nav/page-content-nav.component';
-import { PageContentDetailComponent } from './page-content/page-content-detail/page-content-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,    
-    NavbarComponent, PageContentComponent, PageContentNavComponent, PageContentDetailComponent
+    NavbarComponent,
+    PageContentComponent
   ],
   imports: [
     BrowserModule,
