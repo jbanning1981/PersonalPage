@@ -1,6 +1,14 @@
 @import 'variables';
 
-html, body {
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 
 }
 
@@ -17,6 +25,10 @@ html, body {
 
 .bg-violet {
     background-color: $violet;
+}
+
+.border-violet {
+    border-color: $violet;
 }
 
 .bg-light-grey {
@@ -65,5 +77,9 @@ html, body {
 }
 
 #content {
-    flex-grow:1;
+  flex-grow: 1;
+}
+
+.card {
+    min-height:50vh;
 }
