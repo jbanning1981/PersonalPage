@@ -5,33 +5,33 @@
         <div class="col-12 py-5">
           <div class="d-flex bg-blue text-white rounded shadow">
             <div class="col-6">
-              <div class=" d-flex h-100 justify-content-center align-items-center">
+              <div class=" d-flex h-100 justify-content-end align-items-center">
                 <div class="d-flex justify-content-center">
-                    <img src="../../assets/Portrait.jpg" class="h-75 w-75 rounded-circle border border-blue border-5 " />
+                  <img src="../../assets/Portrait.jpg" class="h-75 w-75 rounded-circle border border-blue border-5 " />
                 </div>
               </div>
             </div>
             <div class="col-6">
               <div class="d-flex flex-column justify-content-center align-items-center h-100 px-5">
-                
-                  <div class="d-flex w-100">
-                    <div class="display-3 bg-blue text-white pb-1">Jim Banning</div>
+
+                <div class="d-flex w-100">
+                  <div class="display-3 bg-blue text-white pb-1">Jim Banning</div>
+                </div>
+                <div class="d-flex w-100">
+                  <div class="lead">.NET Developer. Texas Native. Ancient Millenial.</div>
+                </div>
+                <div class="d-flex w-100 justify-content-start">
+                  <div class="d-flex">
+                    <a class="text-white p-2" href="https://www.linkedin.com/in/jimbanning">
+                      <i class="fab fa-linkedin fa-3x"></i>
+                    </a>
                   </div>
-                  <div class="d-flex w-100">
-                    <div class="lead">.NET Developer. Texas Native. Ancient Millenial.</div>
+                  <div class="d-flex">
+                    <a class="text-white p-2" href="https://github.com/jbanning1981">
+                      <i class="fab fa-github-square fa-3x"></i>
+                    </a>
                   </div>
-                  <div class="d-flex w-100 justify-content-start">
-                    <div class="d-flex">
-                      <a class="text-white p-2" href="https://www.linkedin.com/in/jimbanning">
-                        <i class="fab fa-linkedin fa-3x"></i>
-                      </a>
-                    </div>
-                    <div class="d-flex">
-                      <a class="text-white p-2" href="https://github.com/jbanning1981">
-                        <i class="fab fa-github-square fa-3x"></i>
-                      </a>
-                    </div>
-                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -41,9 +41,16 @@
         <div class="col-12">
           <div class="card border-blue mt-5 shadow-lg">
             <div class="card-header text-center bg-blue text-white h3">
-              <div class="display-5">Work History</div>
+              <div class="display-5">
+                <i class="fas fa-laptop-code"></i> Work History
+              </div>
             </div>
             <div class="card-body">
+              <ul>
+                <li *ngFor="let job of JobHistory">
+                  {{job.title}}
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -76,6 +83,6 @@
         </div>
       </div>
     </div>
-    </div>
   </div>
+</div>
 
