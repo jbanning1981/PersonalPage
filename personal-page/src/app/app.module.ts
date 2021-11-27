@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PageContentComponent } from './page-content/page-content.component';
 import { AppRoutingModule } from './app-routing.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,    

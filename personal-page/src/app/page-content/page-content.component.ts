@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IEmploymentRecord, EmploymentRecord } from './data/EmploymentRecord';
 
 @Component({
   selector: 'app-page-content',
@@ -12,4 +13,6 @@ export class PageContentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  private JobHistory: EmploymentRecord[] = new Array(4);
 }

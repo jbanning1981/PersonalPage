@@ -9,7 +9,7 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-
+  background-color:$gray-500;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -27,8 +27,20 @@ body {
     background-color: $violet;
 }
 
+.bg-blue {
+    background-color: $snes-blue;
+}
+
+.border-blue {
+    border-color: $snes-blue;
+}
+
+.border.border-blue {
+  border-color: $snes-blue !important;
+}
+
 .border-violet {
-    border-color: $violet;
+  border-color: $violet;
 }
 
 .bg-light-grey {
