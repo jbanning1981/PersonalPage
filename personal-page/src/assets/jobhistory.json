@@ -1,0 +1,23 @@
+[
+  {
+    "company": "Schneider Electric",
+    "title": "Programmer Analyst",
+    "startDate": "2012-11-19",
+    "endDate": "2014-01-22",
+    "accomplishments": [ "TODO" ]
+  },
+  {
+    "company": "iPeople",
+    "title": "Developer",
+    "startDate": "2014-01-27",
+    "endDate": "2015-03-13",
+    "accomplishments": [ "TODO" ]
+  },
+  {
+    "company": "Inmar",
+    "title": ".NET Application Developer",
+    "startDate": "2015-03-17",
+    "endDate": "",
+    "accomplishments": [ "TODO" ]
+  }
+]

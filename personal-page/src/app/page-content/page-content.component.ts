@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JobService } from './services/job-data.service';
 import { IEmploymentRecord, EmploymentRecord } from './models/EmploymentRecord';
 
 @Component({
@@ -10,9 +11,7 @@ export class PageContentComponent implements OnInit {
 
   public JobHistory: IEmploymentRecord[] = new Array(0);
 
-  constructor() {
-
-  }
+  constructor(private jobService: JobService) { }
 
   ngOnInit(): void {
     console.log('Page Content Loaded');
@@ -22,7 +21,11 @@ export class PageContentComponent implements OnInit {
 
   LoadJobHistory(): void {
     console.log('Load job history using API call');
-    this.DisplayJobHistory();
+    this.jobService.getJobHistory()
+      .subscribe(data => {
+        this.JobHistory = data;
+        console.log(data);
+      });
   }
 
   DisplayJobHistory(): void {
