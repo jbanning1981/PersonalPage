@@ -1,79 +1,54 @@
 <div id="content" class="container-fluid align-items-stretch p-0 w-100">
   <div class="row d-flex justify-content-center">
-    <div class="bg-light col-10 mt-5 rounded justify-content-center">
-      <div id="me-section" class="row my-5 mx-1 bg-blue text-white rounded shadow">
-        <div class="row">
-          <div class="col-12 col-lg-6">
-            <div class="d-flex justify-content-center justify-content-xl-end">
-              <img src="../../assets/Portrait.jpg" class="d-flex rounded-circle border border-blue border-5 " />
+    <div class="col-10 mt-5 rounded justify-content-center shadow" style="background-color:rgba(248,249,250,0.6)">
+      <div style="opacity:1">
+        <section id="me-section" class="py-5 row">
+        </section>
+        <section id="work-section" class="py-5 row">
+          <div class="col-12">
+            <div class="card border-blue mt-2 shadow-lg">
+              <div class="card-header text-center text-white" style="background-color: rgba(0, 56, 123,0.7)">
+                <div class="display-6">
+                  <i class="fas fa-laptop-code"></i> Experience
+                </div>
+              </div>
+              <div class="card-body">
+                <div *ngFor="let job of JobHistory" class="row">
+                  <div class="col-12">
+                    <div class="card my-2 h-auto shadow">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-6 col-lg-3">
+                            <h5 class="card-title">{{job.company}}</h5>
+                          </div>
+                          <div class="col-6 col-lg-4">
+                            <h5 class="card-title">{{job.title}}</h5>
+                          </div>
+                          <div class="col-6 col-lg-3">
+                            <h5 class="card-title">{{job.startDate | date:'MM/YYYY'}} - {{job.endDate | date:'MM/YYYY'}}</h5>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <ul>
+                              <li *ngFor="let item of job.accomplishments"class="p-0">{{item}}</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6 d-flex">
-            <div class="d-flex flex-wrap justify-content-center align-self-center">
-              <div class="col-12 d-flex justify-content-xl-start justify-content-center align-self-center">
-                <div class="display-3 bg-blue text-white">Jim Banning</div>
-              </div>
-              <div class="col-12 d-flex justify-content-xl-start justify-content-center align-self-center">
-                <div class="lead">.NET Developer. Texas Native. Ancient Millenial.</div>
-              </div>
-              <div class="col-12 d-flex justify-content-xl-start justify-content-center align-self-center">
-                <a class="text-white p-2" href="https://www.linkedin.com/in/jimbanning" target="_blank">
-                  <i class="fab fa-linkedin fa-3x"></i>
-                </a>
-                <a class="text-white p-2" href="https://github.com/jbanning1981" target="_blank">
-                  <i class="fab fa-github-square fa-3x"></i>
-                </a>
-              </div>
-            </div>
+        </section>
+        <section id="school-section" class="py-5 row">
+        </section>
+        <section id="about-section" class="py-5 row">
+        </section>
+      </div>
 
-          </div>
-        </div>
-      </div>
-      <div id="work-section" class="py-5 row">
-        <div class="col-12">
-          <div class="card border-blue mt-2 shadow-lg">
-            <div class="card-header text-center bg-blue text-white h3">
-              <div class="display-5">
-                <i class="fas fa-laptop-code"></i> Work History
-              </div>
-            </div>
-            <div class="card-body">
-              <ul>
-                <li *ngFor="let job of JobHistory">
-                  {{job.title}}
-                </li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div id="school-section" class="py-5 col-xl-10">
-        <div class="card border-violet mt-5 ">
-          <div class="card-header text-center bg-violet text-white h3">
-            School
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-6">Left</div>
-              <div class="col-6">Right</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="about-section" class="py-5 col-xl-10">
-        <div class="card border-violet mt-5 ">
-          <div class="card-header text-center bg-violet text-white h3">
-            About This Page
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-6">Left</div>
-              <div class="col-6">Right</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>

@@ -4,20 +4,35 @@
     "title": "Programmer Analyst",
     "startDate": "2012-11-19",
     "endDate": "2014-01-22",
-    "accomplishments": [ "TODO" ]
+    "accomplishments": [
+      "Designed user interface for SCADA pipeline operators using ADO.NET and VB.NET",
+      "Developed T-SQL queries and reports for presenting historical SCADA information.",
+      "Converted PERL scripted reports to SSRS reports on pipeline and tank information."
+    ]
   },
   {
-    "company": "iPeople",
+    "company": "Interface People, LLP",
     "title": "Developer",
     "startDate": "2014-01-27",
     "endDate": "2015-03-13",
-    "accomplishments": [ "TODO" ]
+    "accomplishments": [
+      "Assisted in development of ASP.NET MVC3 and WebForms Web Applications with VB.NET, Bootstrap CSS, jQuery, and EF 4.1",
+      "Rewrote data access functions with Entity Framework, LINQ-to-Entities, and LINQ-to-SQL",
+      "Assisted senior developers on AES/DES/3DES querystring encryption",
+      "Assisted in SSRS report creation and stored procedure updates."
+    ]
   },
   {
     "company": "Inmar",
     "title": ".NET Application Developer",
     "startDate": "2015-03-17",
-    "endDate": "",
-    "accomplishments": [ "TODO" ]
+    "endDate": "2017-07-07",
+    "accomplishments": [
+      "Created Repository classes and ASP.NET UI using Bootstrap CSS, HTML5, MVC6, and .NET Core 1.1 that allowed users to navigate and save files to Azure, SharePoint, or File Systems",
+      "Create SSIS Packages to load client flat file information into SQL Server",
+      "Worked with senior developers to migrate an existing VB.NET Webforms application to AngularJS SPA with ASP.NET MVC, Entity Framework, Telerik Kendo UI and C# Web API controllers.",
+      "Created SQL tables, triggers, indexes, and stored procedures.",
+      "Created automated UI tests with Selenium Webdriver."
+    ]
   }
 ]
