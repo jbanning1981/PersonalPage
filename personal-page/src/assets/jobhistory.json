@@ -4,6 +4,7 @@
     "title": "Programmer Analyst",
     "startDate": "2012-11-19",
     "endDate": "2014-01-22",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/Inmar_Logo.jpg",
     "accomplishments": [
       "Designed user interface for SCADA pipeline operators using ADO.NET and VB.NET",
       "Developed T-SQL queries and reports for presenting historical SCADA information.",
@@ -15,6 +16,7 @@
     "title": "Developer",
     "startDate": "2014-01-27",
     "endDate": "2015-03-13",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/Inmar_Logo.jpg",
     "accomplishments": [
       "Assisted in development of ASP.NET MVC3 and WebForms Web Applications with VB.NET, Bootstrap CSS, jQuery, and EF 4.1",
       "Rewrote data access functions with Entity Framework, LINQ-to-Entities, and LINQ-to-SQL",
@@ -27,6 +29,7 @@
     "title": ".NET Application Developer",
     "startDate": "2015-03-17",
     "endDate": "2017-07-07",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/Inmar_Logo.jpg",
     "accomplishments": [
       "Created Repository classes and ASP.NET UI using Bootstrap CSS, HTML5, MVC6, and .NET Core 1.1 that allowed users to navigate and save files to Azure, SharePoint, or File Systems",
       "Create SSIS Packages to load client flat file information into SQL Server",

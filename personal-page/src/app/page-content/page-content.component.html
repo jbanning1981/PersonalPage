@@ -1,9 +1,7 @@
 <div id="content" class="container-fluid align-items-stretch p-0 w-100">
   <div class="row d-flex justify-content-center">
-    <div class="col-10 mt-5 rounded justify-content-center shadow" style="background-color:rgba(248,249,250,0.6)">
-      <div style="opacity:1">
-        <section id="me-section" class="py-5 row">
-        </section>
+    <div class="col-10 mt-5 rounded justify-content-center shadow bg-content-body">
+      <div>
         <section id="work-section" class="py-5 row">
           <div class="col-12">
             <div class="card border-blue mt-2 shadow-lg">
@@ -18,13 +16,13 @@
                     <div class="card my-2 h-auto shadow">
                       <div class="card-body">
                         <div class="row">
-                          <div class="col-6 col-lg-3">
+                          <div class="col-12 col-lg-4">
                             <h5 class="card-title">{{job.company}}</h5>
                           </div>
-                          <div class="col-6 col-lg-4">
+                          <div class="col-12 col-lg-5">
                             <h5 class="card-title">{{job.title}}</h5>
                           </div>
-                          <div class="col-6 col-lg-3">
+                          <div class="col-12 col-lg-3">
                             <h5 class="card-title">{{job.startDate | date:'MM/YYYY'}} - {{job.endDate | date:'MM/YYYY'}}</h5>
                           </div>
                         </div>

@@ -18,9 +18,11 @@ body {
 
 
 .navbar-brand {
-  font-size: 2rem;
-  letter-spacing: 5px;
-  margin-right:0px;
+}
+
+.navbar-portrait {
+  width: 65px;
+  height: 75px;
 }
 
 .bg-violet {
@@ -51,6 +53,10 @@ body {
   background-color: $violet !important;
 }
 
+.bg-content-body {
+  background-color: rgba(248,249,250,0.6);
+}
+
 .color-violet {
   color: $violet;
 }
@@ -64,9 +70,6 @@ body {
   animation: fa-spin 6s infinite linear;
 }
 
-.col.scrollspy-target {
-  position: relative;
-}
 
 .font-size-5rem {
   font-size:5rem;
