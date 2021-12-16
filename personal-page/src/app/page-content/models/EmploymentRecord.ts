@@ -3,6 +3,7 @@ export interface IEmploymentRecord {
   title: string,
   startDate: Date,
   endDate: Date,
+  logoUrl: string,
   accomplishments: string[]
 }
 
@@ -11,6 +12,7 @@ export class EmploymentRecord implements IEmploymentRecord {
   title: string = 'No Title';
   startDate: Date = new Date(2060, 1, 31);
   endDate: Date = new Date(2060, 12, 31);
+  logoUrl: string = '';
   accomplishments: string[] = ['No accomplishments'];
 }
 

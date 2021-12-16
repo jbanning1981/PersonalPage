@@ -1,6 +1,6 @@
 <div id="content" class="container-fluid align-items-stretch p-0 w-100">
-  <div class="row d-flex justify-content-center">
-    <div class="col-10 mt-5 rounded justify-content-center shadow bg-content-body">
+  <div class="row d-flex w-100 justify-content-center gx-0 gx-md-2 ">
+    <div class="col-12 col-md-10 mt-5 rounded justify-content-lg-center shadow bg-content-body">
       <div>
         <section id="work-section" class="py-5 row">
           <div class="col-12">
@@ -14,23 +14,28 @@
                 <div *ngFor="let job of JobHistory" class="row">
                   <div class="col-12">
                     <div class="card my-2 h-auto shadow">
-                      <div class="card-body">
+                      <div class="card-body d-flex flex-column">
                         <div class="row">
-                          <div class="col-12 col-lg-4">
-                            <h5 class="card-title">{{job.company}}</h5>
+                          <div class="col-1">
+                            <div class="d-flex justify-content-end">
+                              <img src='{{job.logoUrl}}' class="d-none d-md-block d-flex rounded-3 job-logo " />
+                            </div>
                           </div>
-                          <div class="col-12 col-lg-5">
-                            <h5 class="card-title">{{job.title}}</h5>
-                          </div>
-                          <div class="col-12 col-lg-3">
-                            <h5 class="card-title">{{job.startDate | date:'MM/YYYY'}} - {{job.endDate | date:'MM/YYYY'}}</h5>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-12">
-                            <ul>
-                              <li *ngFor="let item of job.accomplishments"class="p-0">{{item}}</li>
-                            </ul>
+                          <div class="col-11">
+                            <div class="row pb-2">
+                              <div class="col-12 align-items-center">
+                                <div class="fs-3">{{job.title}}</div>
+                                <div class="lead">{{job.company}}</div>
+                                <div class="text-muted">{{job.startDate | date:'MM/YYYY'}} - {{job.endDate | date:'MM/YYYY'}}</div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-12">
+                                <ul>
+                                  <li *ngFor="let item of job.accomplishments" class="p-0">{{item}}</li>
+                                </ul>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
