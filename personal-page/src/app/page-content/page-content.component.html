@@ -16,16 +16,16 @@
                     <div class="card my-2 h-auto shadow">
                       <div class="card-body d-flex flex-column">
                         <div class="row">
-                          <div class="col-1">
-                            <div class="d-flex justify-content-end">
-                              <img src='{{job.logoUrl}}' class="d-none d-md-block d-flex rounded-3 job-logo " />
+                          <div class="col-2 d-none d-lg-block">
+                            <div class="d-flex justify-content-end pt-3 ">
+                              <img src='{{job.logoUrl}}' class="d-none d-lg-block d-flex w-100 rounded-3 job-logo" />
                             </div>
                           </div>
-                          <div class="col-11">
+                          <div class="col-10">
                             <div class="row pb-2">
                               <div class="col-12 align-items-center">
                                 <div class="fs-3">{{job.title}}</div>
-                                <div class="lead">{{job.company}}</div>
+                                <div><a class="text-reset text-decoration-none company-link" href="{{job.companyUrl}}">{{job.company}}</a></div>
                                 <div class="text-muted">{{job.startDate | date:'MM/YYYY'}} - {{job.endDate | date:'MM/YYYY'}}</div>
                               </div>
                             </div>

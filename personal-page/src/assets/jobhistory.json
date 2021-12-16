@@ -5,6 +5,7 @@
     "startDate": "2020-12-07",
     "endDate": "2021-12-10",
     "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/Match_Group_Logo.jpg",
+    "companyUrl": "https://mtch.com/",
     "accomplishments": [
       "Created WebAPI endpoints using .NET 4.6.2, Dapper ORM, C#, and TinyIoC for Dependency Injection.",
       "Assist in conversion of .NET 4.6.2 application to .NET 5,",
@@ -19,7 +20,8 @@
     "title": "Senior Web Developer",
     "startDate": "2017-10-20",
     "endDate": "2020-12-04",
-    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/Medical_City_Healthcare_Logo.jpg",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/NTX_MedicalCityHealthcareNT_logoSVG.svg",
+    "companyUrl": "https://medicalcityhealthcare.com/",
     "accomplishments": [
       "Worked with a team to develop an Azure hosted .NET Core 2.2 backend for an iOS HealthKit application to allow physicians to monitor patients.",
       "Integrated Azure Key Vault for storing Application Secrets, with Managed Service Identity to register apps in Azure AD and set access permissions.",
@@ -39,6 +41,7 @@
     "startDate": "2015-03-17",
     "endDate": "2017-07-07",
     "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/Inmar_Logo.png",
+    "companyUrl": "https://www.inmar.com/",
     "accomplishments": [
       "Created Repository classes and ASP.NET UI using Bootstrap CSS, HTML5, MVC6, and .NET Core 1.1 that allowed users to navigate and save files to Azure, SharePoint, or File Systems",
       "Create SSIS Packages to load client flat file information into SQL Server",
@@ -53,6 +56,7 @@
     "startDate": "2014-01-27",
     "endDate": "2015-03-13",
     "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/IPeople_Logo.jpg",
+    "companyUrl": "https://www.ipeople.com/",
     "accomplishments": [
       "Assisted in development of ASP.NET MVC3 and WebForms Web Applications with VB.NET, Bootstrap CSS, jQuery, and EF 4.1",
       "Rewrote data access functions with Entity Framework, LINQ-to-Entities, and LINQ-to-SQL",
@@ -66,6 +70,7 @@
     "startDate": "2012-11-19",
     "endDate": "2014-01-22",
     "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/Schneider_Electric_Logo.jpg",
+    "companyUrl": "https://www.se.com/us/en/",
     "accomplishments": [
       "Designed user interface for SCADA pipeline operators using ADO.NET and VB.NET",
       "Developed T-SQL queries and reports for presenting historical SCADA information.",

@@ -9,11 +9,11 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  background-color:$gray-500;
+  background-color: $gray-500;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    background-color: $light-violet;
+  background-color: $light-violet;
 }
 
 
@@ -26,15 +26,15 @@ body {
 }
 
 .bg-violet {
-    background-color: $violet;
+  background-color: $violet;
 }
 
 .bg-blue {
-    background-color: $snes-blue;
+  background-color: $snes-blue;
 }
 
 .border-blue {
-    border-color: $snes-blue;
+  border-color: $snes-blue;
 }
 
 .border.border-blue {
@@ -46,7 +46,7 @@ body {
 }
 
 .bg-light-grey {
-  background-color:#cccccc
+  background-color: #cccccc
 }
 
 .bg-dark.bg-violet {
@@ -72,26 +72,31 @@ body {
 
 
 .font-size-5rem {
-  font-size:5rem;
+  font-size: 5rem;
 }
 
 .font-size-10rem {
-  font-size:10rem;
+  font-size: 10rem;
 }
 
 .font-size-15rem {
-  font-size:15rem;
+  font-size: 15rem;
 }
 
 .font-size-20rem {
-  font-size:20rem;
+  font-size: 20rem;
 }
 
 .w-20 {
-  width:20%;
+  width: 20%;
 }
 
+
 .job-logo {
-  width: 3rem;
-  height: 3rem;
+  min-height:100px;
+  max-width:100%;
+}
+
+a.text-decoration-none.company-link:hover {
+  text-decoration: underline !important;
 }
