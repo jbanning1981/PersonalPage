@@ -4,10 +4,17 @@ on:
   push:
     branches:
       - add-work-history
+  workflow_call:
+    inputs:
+      deploy-app:
+        description: 'A manual flag to deploy the application'
+        default: false
+        required: true
+        type: boolean
 
 jobs:
   build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    if: ${{inputs.deploy-app == true}}
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
