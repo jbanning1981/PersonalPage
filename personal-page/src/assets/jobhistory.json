@@ -1,0 +1,80 @@
+[
+  {
+    "company": "Match Group",
+    "title": "Senior Engineer I (API)",
+    "startDate": "2020-12-07",
+    "endDate": "2021-12-10",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/Match_Group_Logo.jpg",
+    "companyUrl": "https://mtch.com/",
+    "accomplishments": [
+      "Created WebAPI endpoints using .NET 4.6.2, Dapper ORM, C#, and TinyIoC for Dependency Injection.",
+      "Assist in conversion of .NET 4.6.2 application to .NET 5,",
+      "Use Windows Job/Task to generate push notification content and publish to Kafka",
+      "Create unit tests using XUnit and FakeItEasy, and API tests using Postman.",
+      "Implemented a Games API endpoint that pulled content from a microservice, and saved responses to SQL server",
+      "Create T-SQL tables, types, and stored procedures for saving and loading user data."
+    ]
+  },
+  {
+    "company": "Medical City Healthcare",
+    "title": "Senior Web Developer",
+    "startDate": "2017-10-20",
+    "endDate": "2020-12-04",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/NTX_MedicalCityHealthcareNT_logoSVG.svg",
+    "companyUrl": "https://medicalcityhealthcare.com/",
+    "accomplishments": [
+      "Worked with a team to develop an Azure hosted .NET Core 2.2 backend for an iOS HealthKit application to allow physicians to monitor patients.",
+      "Integrated Azure Key Vault for storing Application Secrets, with Managed Service Identity to register apps in Azure AD and set access permissions.",
+      "Implemented IdentityServer4 to handle JWT access and refresh tokens. Used IdentityServer and PingFederated as JWT providers to secure Azure APIs using .NET Core Security Policies.",
+      "Integrated SendGrid and Twilio for SMS 2FA and password resets for patient facing iOS app, and Azure Notification Hub for Apple Push Notifications.",
+      "Created unit tests with MSTest, XUnit, Moq, and In-Memory EF DBContexts.",
+      "Implemented Azure Functions with message queues for processing HealthKit data, importing patient files from Azure Blob Storage, and on-prem to Azure DB ETL",
+      "Created CI/CD workflows with gated check-ins to master branch, and automated Continuous Deployment of SQL DACPAC and Web applications to Azure, using JSON variable substitution to deliver environment specific settings for each deployment environment.",
+      "Create Proof of Concept site to convert legacy NET 4.6 apps to .NET Core 3.1 with a VueJS frontend as a replacement for standard jQuery / MVC",
+      "Created ASP.NET MVC websites with Windows Authentication for tracking of PPE item delivery, available COVID beds, and nurse staffing levels for Medical City hospitals during COVID-19",
+      "Created backend email notification system to pull bed information from MEDITECH BMAC, and send email alerts if beds remained dirty, decreasing patient wait time for available beds."
+    ]
+  },
+  {
+    "company": "Inmar",
+    "title": ".NET Application Developer",
+    "startDate": "2015-03-17",
+    "endDate": "2017-07-07",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/Inmar_Logo.png",
+    "companyUrl": "https://www.inmar.com/",
+    "accomplishments": [
+      "Created Repository classes and ASP.NET UI using Bootstrap CSS, HTML5, MVC6, and .NET Core 1.1 that allowed users to navigate and save files to Azure, SharePoint, or File Systems",
+      "Create SSIS Packages to load client flat file information into SQL Server",
+      "Worked with senior developers to migrate an existing VB.NET Webforms application to AngularJS SPA with ASP.NET MVC, Entity Framework, Telerik Kendo UI and C# Web API controllers.",
+      "Created SQL tables, triggers, indexes, and stored procedures.",
+      "Created automated UI tests with Selenium Webdriver."
+    ]
+  },
+  {
+    "company": "Interface People, LLP",
+    "title": "Developer",
+    "startDate": "2014-01-27",
+    "endDate": "2015-03-13",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/IPeople_Logo.jpg",
+    "companyUrl": "https://www.ipeople.com/",
+    "accomplishments": [
+      "Assisted in development of ASP.NET MVC3 and WebForms Web Applications with VB.NET, Bootstrap CSS, jQuery, and EF 4.1",
+      "Rewrote data access functions with Entity Framework, LINQ-to-Entities, and LINQ-to-SQL",
+      "Assisted senior developers on AES/DES/3DES querystring encryption",
+      "Assisted in SSRS report creation and stored procedure updates."
+    ]
+  },
+  {
+    "company": "Schneider Electric",
+    "title": "Programmer Analyst",
+    "startDate": "2012-11-19",
+    "endDate": "2014-01-22",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/Schneider_Electric_Logo.jpg",
+    "companyUrl": "https://www.se.com/us/en/",
+    "accomplishments": [
+      "Designed user interface for SCADA pipeline operators using ADO.NET and VB.NET",
+      "Developed T-SQL queries and reports for presenting historical SCADA information.",
+      "Converted PERL scripted reports to SSRS reports on pipeline and tank information."
+    ]
+  }
+]
