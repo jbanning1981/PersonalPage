@@ -1,8 +1,4 @@
-.section-header {
-  background-color: rgba(0, 56, 123,0.7);
-}
 
-/* The animation code */
 @keyframes marquee {
   0% {
     content: '';
@@ -120,3 +116,11 @@
   animation-play-state: running;
   animation-direction: normal;
 }
+
+.skill-icon {
+    height:50px;
+    width:50px;
+}
+
+
+    

@@ -57,6 +57,14 @@ body {
   background-color: rgba(248,249,250,0.6);
 }
 
+.bg-custom-blue {
+  background-color: rgba(0, 56, 123,0.7);
+}
+
+.border.border-custom-blue {
+  border-color: rgba(0, 56, 123, 0.7) !important;
+}
+
 .color-violet {
   color: $violet;
 }
