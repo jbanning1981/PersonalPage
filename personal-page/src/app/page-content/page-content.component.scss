@@ -1,0 +1,126 @@
+
+@keyframes marquee {
+  0% {
+    content: '';
+  }
+
+  1% {
+    content: 'C';
+  }
+
+  3% {
+    content: 'Co';
+  }
+
+  5% {
+    content: 'Cod';
+  }
+
+  7% {
+    content: 'Code';
+  }
+
+  9% {
+    content: 'Code. ';
+  }
+
+  11% {
+    content: 'Code. T';
+  }
+
+  13% {
+    content: 'Code. Te';
+  }
+
+  15% {
+    content: 'Code. Tes';
+  }
+
+  17% {
+    content: 'Code. Test';
+  }
+
+  19% {
+    content: 'Code. Test.';
+  }
+
+  21% {
+    content: 'Code. Test. R';
+  }
+
+  23% {
+    content: 'Code. Test. Re';
+  }
+
+  25% {
+    content: 'Code. Test. Rep';
+  }
+
+  27% {
+    content: 'Code. Test. Repe';
+  }
+
+  29% {
+    content: 'Code. Test. Repea';
+  }
+
+  31% {
+    content: 'Code. Test. Repeat';
+  }
+
+  33% {
+    content: 'Code. Test. Repeat.';
+  }
+}
+
+.animated-marquee {
+  display: flex;
+
+  &:after {
+    content: 'Code. Test. Repeat.';
+    animation-name: marquee;
+    animation-duration: 7s;
+    animation-iteration-count: 10;
+    animation-play-state: running;
+    animation-direction: normal;
+  }
+}
+
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  1% {
+    opacity: 1;
+  }
+}
+
+.cursor {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-direction: normal;
+}
+
+.skill-icon {
+    height:50px;
+    width:50px;
+}
+
+
+    

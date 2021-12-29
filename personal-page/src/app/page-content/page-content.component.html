@@ -1,39 +1,118 @@
 <div id="content" class="container-fluid align-items-stretch p-0 w-100">
-  <div class="row d-flex w-100 justify-content-center gx-0 gx-md-2 ">
+  <div class="row d-flex w-100 justify-content-center gx-0">
+    <div class="d-flex justify-content-start text-white bg-custom-blue w-100 px-0 mb-1">
+      <span class="d-flex animated-marquee">></span><span class="d-flex cursor">_</span>
+    </div>
     <div class="col-12 col-md-10 mt-5 rounded justify-content-lg-center shadow bg-content-body">
-      <div>
-        <section id="work-section" class="py-5 row">
+      <div class="px-2">
+        <section id="intro" class="py-5">
           <div class="col-12">
             <div class="card border-blue mt-2 shadow-lg">
-              <div class="card-header text-center text-white" style="background-color: rgba(0, 56, 123,0.7)">
+              <div class="card-header text-center text-white bg-custom-blue">
                 <div class="display-6">
-                  <i class="fas fa-laptop-code"></i> Experience
+                  <i class="far fa-address-card"></i> Intro
                 </div>
               </div>
               <div class="card-body">
-                <div *ngFor="let job of JobHistory" class="row">
+                <div class="row">
                   <div class="col-12">
-                    <div class="card my-2 h-auto shadow">
-                      <div class="card-body d-flex flex-column">
-                        <div class="row">
-                          <div class="col-2 d-none d-lg-block overflow-hidden">
-                            <div class="d-flex justify-content-center justify-content-xl-end pt-3 ">
-                              <img src='{{job.logoUrl}}' class="d-none d-lg-block d-flex rounded-3 job-logo" />
-                            </div>
+                    <p class="lead">
+                      I'm a .NET full stack, jack of all trades dev based out of North Dallas near DFW airport. I built this page to work on my UI skills, and to try out some new things.
+                      I'm excited to learn more about distributed systems, and I'm working to build out my front end skills in Angular.
+                    </p>
+
+                    <p class="w-100 text-center lead text-muted">I'm currently focusing on the following:</p>
+
+                    <!--
+                    d-flex text-white p-2 justify-content-center align-items-center fs-5 w-100
+                                        -->
+
+
+                    <div class="hstack d-flex justify-content-center col-12 ms-Fabric w-100">
+                      <div class="d-flex justify-content-center align-items-middle">
+                        <div class="d-flex align-items-middle border border-5 border-custom-blue rounded-3 me-2">
+                          <div class="d-flex justify-content-center bg-custom-blue pe-2 me-2 skill-icon text-white">
+                            <div class="d-flex ms-Icon ms-Icon--AzureLogo fa-2x align-self-center ps-2" aria-describedby="Azure"></div>
                           </div>
-                          <div class="col flex-grow-1">
-                            <div class="row pb-2">
-                              <div class="col-12 align-items-center">
-                                <div class="fs-3">{{job.title}}</div>
-                                <div><a class="text-reset text-decoration-none company-link" href="{{job.companyUrl}}" target="_blank">{{job.company}} <i class="fas fa-external-link-alt"></i></a></div>
-                                <div class="text-muted">{{job.startDate | date:'MM/YYYY'}} - {{job.endDate | date:'MM/YYYY'}}</div>
+                          <div class="d-flex justify-content-center align-items-center pe-2">
+                            <div class="lead">Azure</div>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-middle border border-5 border-custom-blue rounded-3 me-2">
+                          <div class="d-flex justify-content-center align-items-center  bg-custom-blue  border-5 skill-icon text-white">
+                            <div class="d-flex fab fa-css3-alt fa-2x"></div>
+                          </div>
+                          <div class="d-flex justify-content-center align-items-center px-2">
+                            <div class="lead">CSS</div>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-middle border border-5 border-custom-blue rounded-3 me-2">
+                          <div class="d-flex justify-content-center align-items-center  bg-custom-blue  border-5 skill-icon text-white">
+                            <div class="d-flex ms-Icon ms-Icon--TypeScriptLanguage fa-2x align-self-center"></div>
+                          </div>
+                          <div class="d-flex justify-content-center align-items-center px-2">
+                            <div class="lead">TypeScript</div>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-middle border border-5 border-custom-blue rounded-3 me-2">
+                          <div class="d-flex justify-content-center align-items-center  bg-custom-blue  border-5 skill-icon text-white">
+                            <div class="d-flex ms-Icon ms-Icon--CSharp fa-2x align-self-center"></div>
+                          </div>
+                          <div class="d-flex justify-content-center align-items-center px-2">
+                            <div class="lead">C#</div>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-middle border border-5 border-custom-blue rounded-3 me-2">
+                          <div class="d-flex justify-content-center align-items-center  bg-custom-blue  border-5 skill-icon text-white">
+                            <div class="d-flex fab fa-angular fa-2x align-self-center"></div>
+                          </div>
+                          <div class="d-flex justify-content-center align-items-center px-2">
+                            <div class="lead">Angular</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <section id="work-history" class="py-5">
+          <div class="row">
+            <div class="col-12">
+              <div class="card border-blue mt-2 shadow-lg">
+                <div class="card-header text-center text-white bg-custom-blue">
+                  <div class="display-6">
+                    <i class="fas fa-laptop-code"></i> Experience
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div *ngFor="let job of JobHistory" class="row">
+                    <div class="col-12">
+                      <div class="card my-2 h-auto shadow">
+                        <div class="card-body d-flex flex-column">
+                          <div class="row">
+                            <div class="col-lg-3 col-xxl-1 d-none d-lg-block overflow-hidden">
+                              <div class="d-flex justify-content-end pt-3 ">
+                                <img src='{{job.logoUrl}}' class="d-none d-lg-block d-flex rounded-3 job-logo" />
                               </div>
                             </div>
-                            <div class="row">
-                              <div class="col-12">
-                                <ul>
-                                  <li *ngFor="let item of job.accomplishments" class="p-0">{{item}}</li>
-                                </ul>
+                            <div class="col flex-grow-1">
+                              <div class="row pb-2">
+                                <div class="col-12 align-items-center">
+                                  <div class="fs-3">{{job.title}}</div>
+                                  <div><a class="text-reset text-decoration-none company-link" href="{{job.companyUrl}}" target="_blank">{{job.company}} <i class="fas fa-external-link-alt"></i></a></div>
+                                  <div class="text-muted">{{job.startDate | date:'MM/YYYY'}} - {{job.endDate | date:'MM/YYYY'}}</div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <ul>
+                                    <li *ngFor="let item of job.accomplishments" class="p-0">{{item}}</li>
+                                  </ul>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -46,9 +125,15 @@
             </div>
           </div>
         </section>
-        <section id="school-section" class="py-5 row">
+        <section id="school-section" class="py-5">
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
         </section>
-        <section id="about-section" class="py-5 row">
+        <section id="about-section" class="py-5">
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
         </section>
       </div>
 
