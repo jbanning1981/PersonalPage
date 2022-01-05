@@ -75,7 +75,7 @@
         </section>
         <section id="work-history" class="py-5">
           <div class="col-12">
-            <div class="card border-blue mt-2 shadow-lg">
+            <div class="card border-blue mt-2 shadow-lg" *ngIf="JobHistory.length > 0">
               <div class="card-header text-center text-white bg-custom-blue">
                 <div class="display-6">
                   <i class="fas fa-laptop-code"></i> Experience
@@ -97,7 +97,7 @@
                               <div class="col-12 align-items-center">
                                 <div class="fs-3">{{job.title}}</div>
                                 <div><a class="text-reset text-decoration-none company-link" href="{{job.companyUrl}}" target="_blank">{{job.company}} <i class="fas fa-external-link-alt"></i></a></div>
-                                <div class="text-muted">{{job.startDate | date:'MM/YYYY'}} - {{job.endDate | date:'MM/YYYY'}}</div>
+                                <div class="text-muted">{{job.startDate | date:'MMM YYYY'}} - {{job.endDate | date:'MMM YYYY'}}</div>
                               </div>
                             </div>
                             <div class="row">
@@ -118,9 +118,61 @@
           </div>
         </section>
         <section id="school-section" class="py-5">
+          <div class="col-12">
+            <div class="card border-blue mt-2 shadow-lg" *ngIf="SchoolHistory.length > 0">
+              <div class="card-header text-center text-white bg-custom-blue">
+                <div class="display-6">
+                  <i class="fas fa-graduation-cap"></i> Education
+                </div>
+              </div>
+              <div class="card-body">
+                <div *ngFor="let school of SchoolHistory" class="row">
+                  <div class="col-12">
+                    <div class="card my-2 h-auto shadow">
+                      <div class="card-body d-flex flex-column">
+                        <div class="row">
+                          <div class="col-2 col-xxxl-1 d-none d-lg-block overflow-hidden">
+                            <div class="d-flex justify-content-end pt-3 ">
+                              <img src='{{school.logoUrl}}' class="d-none d-lg-block d-flex rounded-3 job-logo" />
+                            </div>
+                          </div>
+                          <div class="col flex-grow-1">
+                            <div class="row">
+                              <div class="col-12 align-items-center">
+                                <div>
+                                  <a class="text-reset text-decoration-none company-link" href="{{school.schoolUrl}}" target="_blank">
+                                    <span class="fs-3 pe-4">{{school.name}}</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                  </a>
+                                </div>
+                                <div class="text-muted">
+                                  <span class="pe-1">{{school.degreeType}}</span> {{school.degree}}
+                                </div>
+                                <div class="text-muted">{{school.startDate | date:'YYYY'}} - {{school.endDate | date:'YYYY'}}</div>
 
-          <div class="col-12"></div>
-
+                              </div>
+                            </div>
+                            <div class="row py-1">
+                              <div class="col-12">
+                                <div class="text-muted">{{school.description}}</div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-12">
+                                <ul>
+                                  <li *ngFor="let item of school.highlights" class="p-0">{{item}}</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section id="about-section" class="py-5">
 

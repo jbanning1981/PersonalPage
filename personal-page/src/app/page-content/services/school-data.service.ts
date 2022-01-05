@@ -2,17 +2,17 @@ import { Component, Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { IEmploymentRecord } from '../models/EmploymentRecord';
+import { ISchoolRecord } from '../models/SchoolRecord';
 
 @Injectable({
   providedIn: 'root',
 })
-export class JobService {
+export class SchoolService {
 
   constructor(private http: HttpClient) { }
 
-  getJobHistory(): Observable<IEmploymentRecord[]> {
-    return this.http.get<IEmploymentRecord[]>('assets/jobHistory.json');
+  getSchoolHistory(): Observable<ISchoolRecord[]> {
+    return this.http.get<ISchoolRecord[]>('assets/schoolHistory.json');
   }
 
 }

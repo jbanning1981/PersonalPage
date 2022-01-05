@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { JobService } from './services/job-data.service';
-import { IEmploymentRecord, EmploymentRecord } from './models/EmploymentRecord';
+import { SchoolService } from './services/school-data.service';
+import { IEmploymentRecord } from './models/EmploymentRecord';
+import { ISchoolRecord } from './models/SchoolRecord';
 
 @Component({
   selector: 'app-page-content',
@@ -10,19 +12,37 @@ import { IEmploymentRecord, EmploymentRecord } from './models/EmploymentRecord';
 export class PageContentComponent implements OnInit {
 
   public JobHistory: IEmploymentRecord[] = new Array(0);
+  public SchoolHistory: ISchoolRecord[] = new Array(0);
 
-  constructor(private jobService: JobService) { }
+  constructor(private jobService: JobService, private schoolService: SchoolService) { }
 
   ngOnInit(): void {
-    this.JobHistory.push(new EmploymentRecord());
-    this.LoadJobHistory();
+    this.loadJobHistory();
+    this.loadSchoolHistory();
   }
 
-  LoadJobHistory(): void {
+  loadSchoolHistory() {
+    this.schoolService.getSchoolHistory()
+      .subscribe(data => {
+        if (Array.isArray(data)) {
+          this.SchoolHistory = data;
+        }
+        else {
+          this.SchoolHistory = [];
+        }
+      });
+  }
+
+  loadJobHistory(): void {
     this.jobService.getJobHistory()
       .subscribe(data => {
-        this.JobHistory = data;
-        
+        if (Array.isArray(data)) {
+          this.JobHistory = data;
+        }
+        else {
+          this.JobHistory = [];
+        }
+
       });
   }
 }
