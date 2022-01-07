@@ -95,7 +95,7 @@
                           <div class="col flex-grow-1">
                             <div class="row pb-2">
                               <div class="col-12 align-items-center">
-                                <div class="fs-3">{{job.title}}</div>
+                                <div class="fs-4">{{job.title}}</div>
                                 <div><a class="text-reset text-decoration-none company-link" href="{{job.companyUrl}}" target="_blank">{{job.company}} <i class="fas fa-external-link-alt"></i></a></div>
                                 <div class="text-muted">{{job.startDate | date:'MMM YYYY'}} - {{job.endDate | date:'MMM YYYY'}}</div>
                               </div>
@@ -140,9 +140,9 @@
                             <div class="row">
                               <div class="col-12 align-items-center">
                                 <div>
-                                  <a class="text-reset text-decoration-none company-link" href="{{school.schoolUrl}}" target="_blank">
-                                    <span class="fs-3 pe-4">{{school.name}}</span>
-                                    <i class="fas fa-external-link-alt"></i>
+                                  <a class="d-flex text-reset text-decoration-none company-link align-items-center" href="{{school.schoolUrl}}" target="_blank">
+                                    <span class="d-flex fs-4 pe-2">{{school.name}}</span>
+                                    <i class="d-flex fas fa-external-link-alt"></i>
                                   </a>
                                 </div>
                                 <div class="text-muted">
