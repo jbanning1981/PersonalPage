@@ -1,0 +1,34 @@
+[
+  {
+    "name": "University of Houston",
+    "degree": "Computer Information Systems",
+    "degreeType": "B.S.",
+    "startDate": "6/1/2010",
+    "endDate": "5/31/2013",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/UH_Logo.jpg",
+    "schoolUrl": "https://www.uh.edu/",
+    "description": "",
+    "highlights": [
+      "3.96 GPA, Summa Cum Laude",
+      "Developed Desktop and WebForms .NET applications in Visual Basic (VB.NET)",
+      "Designed a 40 table database and normalized to third normal form (3NF)",
+      "Developed C++ console applications",
+      "Developed instructions on WEP security flaws, and provided exploitation demonstration",
+      "Successfully exploited workstations and servers in a test lab using Backtrack and Metasploit",
+      "Conducted forensic analysis of portable drives to recovered hidden and deleted files"
+    ]
+  },
+  {
+    "name": "University of Texas-Austin",
+    "degree": "History",
+    "degreeType": "B.A.",
+    "startDate": "8/1/1999",
+    "endDate": "6/30/2003",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/UT_Logo.jpg",
+    "schoolUrl": "https://www.utexas.edu/",
+    "description": "",
+    "highlights": [
+      "Completed introductory classes in C++, Java, Haskell, and assembly language programming"
+    ]
+  }
+]

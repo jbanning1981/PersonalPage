@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { PageContentComponent } from './page-content/page-content.component';
-import { JobService } from './page-content/services/job-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
 
