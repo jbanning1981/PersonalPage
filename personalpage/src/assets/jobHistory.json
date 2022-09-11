@@ -1,5 +1,18 @@
 [
   {
+    "company": "Parallon",
+    "title": "Consulting Application Engineer",
+    "startDate": "2021-12-20",
+    "endDate": "Present",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/Parallon_New_Logo.jpg",
+    "companyUrl": "https://parallon.com/",
+    "accomplishments": [
+      "Created DevOps pipelines for Dev/QA/Production, to include gated check-ins, unit tests, SQL DACPAC deployment and IIS deployment of .NET Core 5.0 Web application",
+      "Provided guidance to an offshore team of four on the development of an SMS, Email, and Agentless dialer campaign designed to increase appointment bookings for 142 facilities, with an average of 3000 SMS and Email per day",
+      "Served as a technical product manager, working with the business to develop guidelines, and creating user stories and documentation in JIRA and Confluence"
+    ]
+  },
+  {
     "company": "Match Group",
     "title": "Senior Engineer I (API)",
     "startDate": "2020-12-07",
