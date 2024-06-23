@@ -1,8 +1,18 @@
+@import "bootstrap/scss/bootstrap";
+
+//Make the top level html element fill the screen.
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+
 body {
   margin: 0;
   padding: 0;
   width:100%;
   height: 100%;
+  background: $gray-200;
 }
 
 :root {
@@ -28,14 +38,6 @@ a {
 a:hover {
   color: #535bf2;
 }
-
-/* body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
 
 h1 {
   font-size: 3.2em;

@@ -1,7 +1,7 @@
 {
   "name": "personalpage",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,6 +14,8 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -26,6 +28,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "sass": "^1.77.6",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   }
