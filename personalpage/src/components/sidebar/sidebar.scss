@@ -1,0 +1,19 @@
+@import "bootstrap/scss/bootstrap";
+
+.offcanvas-md.offcanvas-start.sidebar {
+    background: $gray-300 !important;
+    color: $white !important;
+}
+
+.sidebar_photo img {
+    height: 200px;
+    
+}
+
+.sidebar-footer {
+    background-color: #00387bb3;
+}
+
+#sidebarPortrtaitWrapper {
+    background-color: $white;
+}

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import "./navbar.scss";
-import portrait from "../../assets/Portrait.jpg";
+import portrait from "../../assets/Low-Poly-Portrait-2.png";
 
 const Navbar = () => {
   return (
