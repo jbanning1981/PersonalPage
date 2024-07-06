@@ -10,37 +10,37 @@ function App() {
 
   return (
     <>
-      <div className="h-100 w-100">
-        <Navbar></Navbar>
-        <div className="container-fluid p-0 d-flex h-100">
-          <Sidebar></Sidebar>
-          <div className="bg-light flex-fill">
-            <div className="p-2 d-md-none d-flex text-white bg-success">
-                <a href="#" className="text-white" 
-                   data-bs-toggle="offcanvas"
-                   data-bs-target="#bdSidebar">
-                    <i className="fa-solid fa-bars"></i>
-                </a>
+      <div className="d-flex flex-column w-100">
+        <div className="d-flex">
+          <Navbar></Navbar>
+        </div>
+        <div className="d-flex w-100">
+          <div className="container-fluid navbar-footer">
+            <span className="p-1"></span>
+          </div>
+        </div>
+        <div className="d-flex flex-fill">
+          <div className="container-fluid p-0 d-flex">
+            <div className="d-flex">
+              <Sidebar></Sidebar>
             </div>
-            <div className="p-4">
-                <nav>
-                    <ol className="breadcrumb">
-                        <li className="breadcrumb-item">
-                            <i className="fa-solid fa-house"></i>
-                        </li>
-                        <li className="breadcrumb-item">Learning Content</li>
-                        <li className="breadcrumb-item">Next Page</li>
-                    </ol>
-                </nav>
-                <div className="row">
-                    <div className="col">
+
+            <div className="bg-white d-flex flex-grow-1 align-self-stretch">
+              <div className="container-fluid">
+                <div className="flex-row w-100">
+                  <div className="p-4">
+                    <div className="row">
+                      <div className="col">
                         <p>Page content goes here</p>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-        </div>
+      </div>
     </>
   );
 }

@@ -2,13 +2,8 @@
 
 .offcanvas-md.offcanvas-start.sidebar {
     background: $gray-300 !important;
-    color: $white !important;
 }
 
-.sidebar_photo img {
-    height: 200px;
-    
-}
 
 .sidebar-footer {
     background-color: #00387bb3;
@@ -16,4 +11,22 @@
 
 #sidebarPortrtaitWrapper {
     background-color: $white;
+}
+
+#sidebarPortraitOuterWrapper {
+    background-color: $blue-800;
+}
+
+@include media-breakpoint-down(lg) {
+    .sidebar_photo img {
+        height: 7em;
+        width: 7em;
+    }    
+}
+
+@include media-breakpoint-up(lg) {
+    .sidebar_photo img {
+        height: 200px;
+        width:200px;
+    }    
 }
