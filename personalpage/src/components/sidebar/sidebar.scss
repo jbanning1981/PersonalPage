@@ -1,13 +1,9 @@
 @import "bootstrap/scss/bootstrap";
 
-.offcanvas-md.offcanvas-start.sidebar {
-    background: $gray-300 !important;
+.h-20 {
+    height: 20%;
 }
 
-
-.sidebar-footer {
-    background-color: #00387bb3;
-}
 
 #sidebarPortrtaitWrapper {
     background-color: $white;
@@ -17,16 +13,9 @@
     background-color: $blue-800;
 }
 
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-up(xxl) {
     .sidebar_photo img {
-        height: 7em;
-        width: 7em;
-    }    
-}
-
-@include media-breakpoint-up(lg) {
-    .sidebar_photo img {
-        height: 200px;
-        width:200px;
-    }    
+        max-height: 200px;
+        max-width: 200px;
+    }
 }

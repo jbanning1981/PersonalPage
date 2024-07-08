@@ -1,13 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import "./navbar.scss";
-import portrait from "../../assets/Low-Poly-Portrait-2.png";
+import portrait from "../../assets/LP-Portrait-2.png";
 
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg w-100 p-xl-4 text-white d-flex flex-wrap justify-content-center justify-content-lg-between flex-row px-2">
-        <div className="d-flex navbar-brand d-xxl-none">
+      <nav className="navbar navbar-expand-lg w-100 p-xl-3 text-white d-flex flex-wrap justify-content-center justify-content-lg-between flex-row px-2">
+        <div className="d-flex navbar-brand d-xl-none">
           <img
             src={portrait}
             alt="Jim Banning Avatar"
@@ -15,12 +15,12 @@ const Navbar = () => {
           />
         </div>
 
-        <div className="d-flex fs-3 d-xxl-none">
+        <div className="d-flex fs-3 d-xl-none">
           <div className="text-center">
             Jim Banning - North Texas C#/.NET Dev
           </div>
         </div>
-        <div className="d-flex ms-lg-auto px-2 d-xxl-none">
+        <div className="d-flex ms-lg-auto px-2 d-xl-none">
           <ul className="navbar-nav flex-row">
             <li className="nav-item px-1 px-lg-0">
               <a className="nav-link text-white" href="https://github.com">
