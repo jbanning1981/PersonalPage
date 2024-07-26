@@ -12,10 +12,3 @@
 #sidebarPortraitOuterWrapper {
     background-color: $blue-800;
 }
-
-@include media-breakpoint-up(xxl) {
-    .sidebar_photo img {
-        max-height: 200px;
-        max-width: 200px;
-    }
-}
