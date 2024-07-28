@@ -7,7 +7,7 @@ const Sidebar = () => {
   return (
     <div
       id="sidebar"
-      className="sidebar offcanvas-xl offcanvas-start d-flex w-25"
+      className="sidebar offcanvas-xl offcanvas-start d-flex w-25 border-end shadow"
     >
         <div className="sidebar_content d-flex flex-wrap w-100 flex-column">
           <div className="h-20">{/*Spacing div*/}</div>
@@ -25,8 +25,8 @@ const Sidebar = () => {
             </div>
           </div>
           <div className="d-flex flex-column text-center w-100">
-            <div className="fs-xxl-3 py-1">Jim Banning</div>
-            <div className="fs-xxl-4 fst-italic py-1">
+            <div className="fs-2 fst-italic py-1">Jim Banning</div>
+            <div className="fs-4 py-1">
               North Texas C#/.NET Dev
             </div>
           </div>

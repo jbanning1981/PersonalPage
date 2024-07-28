@@ -1,0 +1,20 @@
+@import "bootstrap/scss/bootstrap";
+
+.pt-neg10 {
+    margin-top:-50px;
+}
+
+.border.rounded-circle.main-spin {
+    border-color: $blue-600 !important;
+    border-width: 10px !important;
+    border-top-color:transparent !important;
+}
+
+// @keyframes main-spinner {
+//     to { transform: rotate(360deg) #{"/* rtl:ignore */"}; }
+// }
+
+@mixin main-spinner {
+
+
+}
