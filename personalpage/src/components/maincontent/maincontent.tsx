@@ -15,18 +15,26 @@ const MainContent = () => {
 
   return (
     <div className="bg-white d-flex flex-grow-1 align-self-stretch w-100 h-100">
-      {true && (
+      {isLoading && (
         <div className="d-flex justify-content-center w-100">
           <div className="d-flex align-items-middle">
             <div className="align-self-center pt-neg10">
-              <div className="border rounded-circle main-spin main-spinner">
-                <div className="p-5"></div>
+              <div className="border rounded-circle bottom-spin spinner">
+                <div className="p-1">
+                  <div className="border rounded-circle top-spin">
+                    <div className="p-3">
+                      <div className="border rounded-circle core">
+                        <div className="p-3"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       )}
-      {/* <div className="container-fluid">
+      <div className="container-fluid">
         <div className="flex-row w-100">
           <div className="p-4">
             <div className="row">
@@ -36,7 +44,7 @@ const MainContent = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

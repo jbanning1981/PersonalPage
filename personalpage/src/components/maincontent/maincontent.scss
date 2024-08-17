@@ -4,17 +4,50 @@
     margin-top:-50px;
 }
 
-.border.rounded-circle.main-spin {
+.border.rounded-circle.top-spin {
     border-color: $blue-600 !important;
     border-width: 10px !important;
     border-top-color:transparent !important;
 }
 
-// @keyframes main-spinner {
-//     to { transform: rotate(360deg) #{"/* rtl:ignore */"}; }
-// }
-
-@mixin main-spinner {
-
-
+.border.rounded-circle.bottom-spin {
+    border-color: $blue-600 !important;
+    border-width: 10px !important;
+    border-bottom-color:transparent !important;
 }
+
+.border.rounded-circle.left-spin {
+    border-color: $blue-600 !important;
+    border-width: 10px !important;
+    border-left-color:transparent !important;
+}
+
+.border.rounded-circle.right-spin {
+    border-color: $blue-600 !important;
+    border-width: 10px !important;
+    border-right-color:transparent !important;
+}
+
+.border.rounded-circle.core {
+    border-color: $blue-600 !important;
+    border-width: 10px !important;
+    background: $blue-600;
+}
+
+/*animate need to be defined first*/
+@mixin animate($animation,$duration,$method,$times){
+    animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}
+
+ .spinner{ 
+    @include keyframes(spin2){
+        to { transform: rotate(-360deg)  }
+     }
+   @include animate(spin2, 8s, linear, infinite);
+ }
