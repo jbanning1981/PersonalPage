@@ -32,12 +32,12 @@ const Sidebar = () => {
           </div>
           <div className="d-flex w-100 justify-content-center">
             <div className="p-2">
-              <a className="text-dark" href="https://github.com">
+              <a className="text-dark" href="https://github.com/jbanning1981/" target="_blank" rel="noreferrer noopener">
                 <FontAwesomeIcon className="fa-2x" icon={faGithub} />
               </a>
             </div>
             <div className="p-2">
-              <a className="text-dark" href="https://linkedin.com">
+              <a className="text-dark" href="https://www.linkedin.com/in/jimbanning/" target="_blank" rel="noreferrer noopener">
                 <FontAwesomeIcon className="fa-2x" icon={faLinkedin} />
               </a>
             </div>

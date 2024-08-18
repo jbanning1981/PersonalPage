@@ -1,16 +1,39 @@
 import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import "./maincontent.scss";
 const MainContent = () => {
-  const [isLoading, setLoadingStatus] = useState(true);
+  console.log('Content page loading...');
+  const [isLoading, setLoadingStatus] = useState(false);
   const [loadingText, setLoadingText] = useState("Loading...");
 
+  let isSchoolDataLoaded = false;
+  const getSchoolData = async () => {
+    
+    if(isSchoolDataLoaded) {
+      console.log('school data already loaded.');
+      return;
+    }
+    
+    //get data 
+      console.log('Starting API call.');
+      const schoolApiUrl = 'https://jbanning1981.blob.core.windows.net/assets/schoolHistory.json';
+      let schoolData = await fetch(schoolApiUrl, {
+        mode: 'no-cors'
+      });
+      //convert to json
+      isSchoolDataLoaded = true;
+  }
+
+
   useEffect(() => {
+    setLoadingStatus(true);
+
+    
     setTimeout(function () {
+      getSchoolData();
       setLoadingText("API loaded Page content goes here");
       setLoadingStatus(false);
-    }, 2000);
+    }, 5000);
+
   }, []);
 
   return (
@@ -34,17 +57,19 @@ const MainContent = () => {
           </div>
         </div>
       )}
-      <div className="container-fluid">
-        <div className="flex-row w-100">
-          <div className="p-4">
-            <div className="row">
-              <div className="col">
-                <p>{loadingText}</p>
+      {!isLoading && (
+        <div className="container-fluid">
+          <div className="flex-row w-100">
+            <div className="p-4">
+              <div className="row">
+                <div className="col">
+                  <p>{loadingText}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
