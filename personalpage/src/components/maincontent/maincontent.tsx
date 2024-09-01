@@ -1,28 +1,38 @@
 import { useEffect, useState } from "react";
+import apiState from "../common/apistate";
+import school from "../common/school";
+import "../schoolcontent/schoolcontent";
 import "./maincontent.scss";
+import SchoolContent from "../schoolcontent/schoolcontent";
 const MainContent = () => {
   console.log("MainContent page started...");
 
-  const [isLoading, setLoadingStatus] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [loadingText, setLoadingText] = useState("Loading...");
 
-  let schoolData = null;
-  let isSchoolDataLoaded = false;
-  let isSchoolDataLoading = false;
-  const getSchoolData = async () => {
-    if (isSchoolDataLoaded) {
-      console.log("School data already loaded. Exiting.");
-      return;
-    }
+  let schoolData: school[] = [];
+  let schoolApiState = "";
+  let jobData = null;
+  let jobApiState = "";  
 
-    if (isSchoolDataLoading) {
-      console.log("School data load in progress. Exiting.");
+  const setLoadStatus = () => {
+    setIsLoaded(apiState.isLoaded(schoolApiState) || apiState.isLoaded(jobApiState));
+    setLoadingText('Loaded!');
+  }
+
+  const getSchoolData = async () => {
+    
+    if (
+      apiState.isLoaded(schoolApiState) ||
+      apiState.isLoading(schoolApiState)
+    ) {
+      setLoadStatus();
       return;
     }
 
     //get data
-    isSchoolDataLoading = true;
-    console.log("Starting API call.");
+    schoolApiState = apiState.loading;
+    console.log("Starting School API call.");
     try {
       const schoolApiUrl = "/schoolHistory.json";
       const schoolResponse = await fetch(schoolApiUrl, {
@@ -34,37 +44,31 @@ const MainContent = () => {
       });
 
       if (!schoolResponse.ok) {
-        throw new Error("Failed to load school data.")
+        throw new Error("Failed to load school data.");
       }
-        
-        //convert to json
-        schoolData = await schoolResponse.json();
-        isSchoolDataLoaded = true;
-        console.log("School data load attempt successful.");
+
+      schoolData = await schoolResponse.json();
+      schoolApiState = apiState.loaded;
+      console.log(schoolData);
     } catch (error) {
       console.error(error);
-      isSchoolDataLoaded = false;
-      console.log("School load attempt failed.");
+      schoolApiState = apiState.error;
     }
-    isSchoolDataLoading = false;
+    setLoadStatus();
   };
 
-  let jobData = null;
-  let isJobDataLoaded = false;
-  let isJobDataLoading = false;
-  const getJobData = async () => {
-    if (isJobDataLoaded) {
-      console.log("Job data already loaded. Exiting.");
-      return;
-    }
 
-    if (isJobDataLoading) {
-      console.log("Job data loading in progress. Exiting.");
+  const getJobData = async () => {
+    if (
+      apiState.isLoaded(jobApiState) ||
+      apiState.isLoading(jobApiState)
+    ) {
+      setLoadStatus();
       return;
     }
 
     //get data
-    isJobDataLoading = true;
+    jobApiState = apiState.loading;
     console.log("Starting Job API call.");
     try {
       const jobApiUrl = "/jobHistory.json";
@@ -79,33 +83,28 @@ const MainContent = () => {
       if (jobDataResponse.ok) {
         //convert to json
         jobData = await jobDataResponse.json();
-        isJobDataLoaded = true;
-        console.log("Job data load successful.");
-        console.log(jobData);
+        jobApiState = apiState.loaded;
       }
     } catch (error) {
       console.error(error);
-      isJobDataLoaded = false;
-      console.log("Load attempt failed.");
+      jobApiState = apiState.error;
     }
-    isJobDataLoading = false;
+    setLoadStatus();
   };
 
   useEffect(() => {
-    if (isLoading != true) {
-      setLoadingStatus(true);
+    console.log('useEffect called');
+    console.log(isLoaded);
+    if (!isLoaded) {
       getSchoolData();
       getJobData();
-      setLoadingText("API loaded Page content goes here");
-      setLoadingStatus(false);
     }
-
-    setTimeout(function () {}, 5000000000);
+    //setTimeout(function () {}, 5000000000);
   }, []);
 
   return (
     <div className="bg-white d-flex flex-grow-1 align-self-stretch w-100 h-100">
-      {isLoading && (
+      {!isLoaded && (
         <div className="d-flex justify-content-center w-100">
           <div className="d-flex align-items-middle">
             <div className="align-self-center pt-neg10">
@@ -133,7 +132,7 @@ const MainContent = () => {
           </div>
         </div>
       )}
-      {!isLoading && (
+      {isLoaded && (
         <div className="container-fluid">
           <div className="flex-row w-100">
             <div className="p-4">
@@ -143,6 +142,9 @@ const MainContent = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div>
+            <SchoolContent schoolData={schoolData} />
           </div>
         </div>
       )}

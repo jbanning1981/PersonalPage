@@ -1,0 +1,13 @@
+interface school {
+    "name": string,
+    "degree": string,
+    "degreeType": string,
+    "startDate": Date,
+    "endDate": Date,
+    "logoUrl": string,
+    "schoolUrl":  string,
+    "description":  string,
+    "highlights":  string[]
+}
+
+export default school;
