@@ -1,4 +1,4 @@
-interface school {
+interface Ischool {
     "name": string,
     "degree": string,
     "degreeType": string,
@@ -10,4 +10,4 @@ interface school {
     "highlights":  string[]
 }
 
-export default school;
+export default Ischool;

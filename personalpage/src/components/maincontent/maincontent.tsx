@@ -1,38 +1,52 @@
 import { useEffect, useState } from "react";
 import apiState from "../common/apistate";
-import school from "../common/school";
+import Ischool from "../common/school";
 import "../schoolcontent/schoolcontent";
 import "./maincontent.scss";
 import SchoolContent from "../schoolcontent/schoolcontent";
 const MainContent = () => {
-  console.log("MainContent page started...");
+  
 
   const [isLoaded, setIsLoaded] = useState(false);
-  const [loadingText, setLoadingText] = useState("Loading...");
+  
+  const [schoolLoadState, setSchoolLoadState] = useState<string>(apiState.idle);
+  const [schoolStateData, setSchoolStateData] = useState<Array<Ischool>>();
 
-  let schoolData: school[] = [];
+  let schoolData: Array<Ischool> = [];
   let schoolApiState = "";
   let jobData = null;
-  let jobApiState = "";  
+  let jobApiState = "";
 
   const setLoadStatus = () => {
-    setIsLoaded(apiState.isLoaded(schoolApiState) || apiState.isLoaded(jobApiState));
-    setLoadingText('Loaded!');
-  }
+  
+    var isSchoolLoaded = apiState.isLoaded(schoolApiState) || apiState.isError(schoolApiState);
+    var isJobLoaded = true || apiState.isLoaded(jobApiState) || apiState.isError(jobApiState);    
+    if(isJobLoaded && isSchoolLoaded) {
+      setIsLoaded(true);
+
+      if(apiState.isLoaded(schoolApiState)) {
+        setSchoolStateData(schoolData);
+      }
+
+  
+    }
+
+  };
 
   const getSchoolData = async () => {
-    
     if (
-      apiState.isLoaded(schoolApiState) ||
-      apiState.isLoading(schoolApiState)
+      (apiState.isLoaded(schoolApiState) || apiState.isLoading(schoolApiState)) 
+      // &&
+      // (!apiState.isLoaded(schoolLoadState) || !apiState.isLoading(schoolLoadState))
     ) {
+      //setSchoolLoadState(schoolApiState);
       setLoadStatus();
       return;
     }
 
     //get data
     schoolApiState = apiState.loading;
-    console.log("Starting School API call.");
+    
     try {
       const schoolApiUrl = "/schoolHistory.json";
       const schoolResponse = await fetch(schoolApiUrl, {
@@ -47,22 +61,29 @@ const MainContent = () => {
         throw new Error("Failed to load school data.");
       }
 
-      schoolData = await schoolResponse.json();
       schoolApiState = apiState.loaded;
-      console.log(schoolData);
+      
+      
+      schoolData = (await schoolResponse.json()).map((entry: Ischool) => {
+        try {
+          return entry;
+        } catch (error) {
+          console.error(error);
+        }
+      });
+      schoolApiState = apiState.loaded;      
+      setSchoolStateData(schoolData);
     } catch (error) {
       console.error(error);
       schoolApiState = apiState.error;
     }
+    
+    setSchoolLoadState(schoolApiState);  
     setLoadStatus();
   };
 
-
   const getJobData = async () => {
-    if (
-      apiState.isLoaded(jobApiState) ||
-      apiState.isLoading(jobApiState)
-    ) {
+    if (apiState.isLoaded(jobApiState) || apiState.isLoading(jobApiState)) {
       setLoadStatus();
       return;
     }
@@ -93,11 +114,11 @@ const MainContent = () => {
   };
 
   useEffect(() => {
-    console.log('useEffect called');
+    console.log("useEffect called");
     console.log(isLoaded);
     if (!isLoaded) {
       getSchoolData();
-      getJobData();
+      //getJobData();
     }
     //setTimeout(function () {}, 5000000000);
   }, []);
@@ -134,7 +155,7 @@ const MainContent = () => {
       )}
       {isLoaded && (
         <div className="container-fluid">
-          <div className="flex-row w-100">
+          {/* <div className="flex-row w-100">
             <div className="p-4">
               <div className="row">
                 <div className="col">
@@ -142,9 +163,9 @@ const MainContent = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div>
-            <SchoolContent schoolData={schoolData} />
+          </div> */}
+          <div className="pt-5">
+            <SchoolContent loadState={schoolLoadState} schoolData={schoolStateData} />
           </div>
         </div>
       )}
