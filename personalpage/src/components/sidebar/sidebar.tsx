@@ -7,52 +7,27 @@ const Sidebar = () => {
   return (
     <div
       id="sidebar"
-      className="sidebar offcanvas-xl offcanvas-start d-flex w-25 border-end shadow"
+      className="sidebar offcanvas-xl offcanvas-start w-25 border-end shadow"
     >
-      <div className="sidebar_content d-flex flex-wrap w-100 flex-column">
-        <div className="h-20">{/*Spacing div*/}</div>
-        <div className="d-flex justify-content-center">
-
-          <div className="sidebar_photo d-flex m-4 align-self-center">
+      <div className="h-20"></div>
+      <div className="row">
+        <div className="col">
+          <div className="mx-auto d-flex justify-content-center">
             <div
               id="sidebarPortraitOuterWrapper"
-              className="d-flex w-auto rounded-circle p-2"
+              className="w-auto rounded-circle p-2"
             >
-              <div
-                id="sidebarPortrtaitWrapper"
-                className="d-flex rounded-circle"
-              >
+              <div id="sidebarPortrtaitWrapper" className="rounded-circle">
                 <img src={p1} alt="Jim Banning Avatar" className="" />
               </div>
             </div>
           </div>
         </div>
-
-        <div className="d-flex flex-column text-center w-100">
-          <div className="fs-2 fst-italic py-1">Jim Banning</div>
-          <div className="fs-4 py-1">North Texas C#/.NET Dev</div>
-        </div>
-        <div className="d-flex w-100 justify-content-center">
-          <div className="p-2">
-            <a
-              className="text-dark"
-              href="https://github.com/jbanning1981/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <FontAwesomeIcon className="fa-2x" icon={faGithub} />
-            </a>
-          </div>
-          <div className="p-2">
-            <a
-              className="text-dark"
-              href="https://www.linkedin.com/in/jimbanning/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <FontAwesomeIcon className="fa-2x" icon={faLinkedin} />
-            </a>
-          </div>
+      </div>
+      <div className="row">
+      <div className="col text-center">
+          <div className="fs-3 fst-italic py-1">Jim Banning</div>
+          <div className="fs-5 py-1">North Texas C#/.NET Dev</div>
         </div>
       </div>
     </div>
