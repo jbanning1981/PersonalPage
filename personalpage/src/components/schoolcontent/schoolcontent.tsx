@@ -1,27 +1,26 @@
 import "./schoolcontent.scss";
-import Ischool from "../common/school";
+import schoolEntry from "../common/schoolEntry";
 import "../common/apistate";
 import apiState from "../common/apistate";
 
 interface schoolResults {
-  loadState: string;
-  schoolData?: Array<Ischool> | undefined;
+  schoolData?: Array<schoolEntry> | undefined;
 }
 
 const SchoolContent = ({
-  loadState,
-  schoolData = [] as Array<Ischool>,
+  schoolData = [] as Array<schoolEntry>,
 }: schoolResults) => {
   return (
     <>
-      {apiState.isLoaded(loadState) && (
+      {schoolData.length > 0 && (
         <>
           <div className="card section-border rounded p-0">
             <div className="fs-2 card-header">Education</div>
             <div className="card-body">
-              {schoolData.map((s) => {
+              {schoolData.map((s,idx) => {
+                var schoolKey = 'sch-'+idx;
                 return (
-                  <div className="row align-items-start pb-4">
+                  <div className="row align-items-start pb-4" key={schoolKey}>
                     <div className="col-auto">
                       <img src={s.logoUrl} className="object-fit-fill" />
                     </div>
@@ -36,8 +35,8 @@ const SchoolContent = ({
                       </div>
                       <div>
                         <ul>
-                        {s.highlights.map((e) =>{
-                          return (<li>{e}</li>)
+                        {s.highlights.map((e,idx) =>{
+                          return (<li key={schoolKey+'-h-'+idx}>{e}</li>)
                         })}
                         </ul>
                         
