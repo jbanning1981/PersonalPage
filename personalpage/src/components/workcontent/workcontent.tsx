@@ -1,6 +1,4 @@
 import "./workcontent.scss";
-import apiState from "../common/apistate";
-import { useEffect, useState } from "react";
 import companyEntry from "../common/companyEntry";
 
 interface workResults {
@@ -15,6 +13,12 @@ const WorkContent = ({
     {employerData.length > 0 && (
       <>
         <p>I have {employerData.length} work entries to load.</p>
+        <div className="card section-border rounded p-0">
+            <div className="fs-2 card-header">Work History</div>
+            <div className="card-body">
+              {}
+            </div>
+        </div>            
       </>
     )}
     </>

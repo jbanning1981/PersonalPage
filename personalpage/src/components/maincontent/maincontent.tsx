@@ -1,5 +1,4 @@
-import { useEffect, useState, Suspense } from "react";
-import apiState from "../common/apistate";
+import { useEffect, useState, useRef } from "react";
 import schoolEntry from "../common/schoolEntry";
 import "../schoolcontent/schoolcontent";
 import "./maincontent.scss";
@@ -12,27 +11,24 @@ const MainContent = () => {
 
   
   
-  let schoolLoadState = "";
+  const isSchoolDataLoaded = useRef(false);
   const [schoolData, setSchoolData] = useState<Array<schoolEntry>>([]);
   
   
-  let jobLoadState = "";
+  const isJobDataLoaded = useRef(false);
   const [jobData, setJobData] = useState<Array<companyEntry>>([]);  
 
+  const [loadState, setLoadState] = useState(false);
+
   const setLoadStatus = () => {
-    var isSchoolLoaded = apiState.isLoaded(schoolLoadState) || apiState.isError(schoolLoadState);
-    var isJobLoaded = true || apiState.isLoaded(jobLoadState) || apiState.isError(jobLoadState);  
-    console.log(isJobLoaded && isSchoolLoaded);
+    if(isSchoolDataLoaded && isJobDataLoaded) {
+      console.log('Setting Load State');
+      setLoadState(true);
+    }
   };
 
-  const getSchoolData = async () => {
-    if (schoolLoadState !== "") {
-      setLoadStatus();
-      return;
-    }
-    
+  const getSchoolData = async () => {   
     try {
-      schoolLoadState = apiState.loading;
       const schoolApiUrl = "/schoolHistory.json";
       const schoolResponse = await fetch(schoolApiUrl, {
         method: "GET",
@@ -46,7 +42,7 @@ const MainContent = () => {
         throw new Error("Failed to load school data.");
       }
 
-      let schoolJsonData = (await schoolResponse.json()).map((entry: schoolEntry) => {
+      const schoolJsonData = (await schoolResponse.json()).map((entry: schoolEntry) => {
         try {
           return entry;
         } catch (error) {
@@ -54,11 +50,10 @@ const MainContent = () => {
         }
       });
       setSchoolData(schoolJsonData);
-      schoolLoadState = apiState.loaded;
+    
       setLoadStatus();
     } catch (error) {
       console.error(error);
-      schoolLoadState = apiState.error;
       setSchoolData([]);
       setLoadStatus();
     }
@@ -66,13 +61,6 @@ const MainContent = () => {
   };
 
   const getJobData = async () => {
-    if (jobLoadState !== "") {
-      setLoadStatus();
-      return;
-    }
-
-    //get data
-    jobLoadState = apiState.loading;
     try {
       const jobApiUrl = "/jobHistory.json";
       const jobDataResponse = await fetch(jobApiUrl, {
@@ -87,7 +75,7 @@ const MainContent = () => {
         throw new Error("Failed to load job data.");
       }      
 
-      let jobJsonData = (await jobDataResponse.json()).map((entry: companyEntry) => {
+      const jobJsonData = (await jobDataResponse.json()).map((entry: companyEntry) => {
         try {
           return entry;
         } catch (error) {
@@ -96,11 +84,9 @@ const MainContent = () => {
       });
       console.log(jobJsonData);
       setJobData(jobJsonData);
-      jobLoadState = apiState.loaded;
       setLoadStatus();
     } catch (error) {
       console.error(error);
-      jobLoadState = apiState.error;
       setJobData([]);
       setLoadStatus();
     }
@@ -109,37 +95,43 @@ const MainContent = () => {
 
 
   useEffect(() => {
-
-    console.log('Job Load State Use Effect Called');
-
-    if(jobLoadState == "") {
+    console.log(isJobDataLoaded.current);
+    if(!isJobDataLoaded.current) {
+      console.log('Job Load State Use Effect Called');     
+      isJobDataLoaded.current = true;
       getJobData(); 
       return;
     }
-    setLoadStatus();
-  }, [jobLoadState]);  
+  });  
 
   useEffect(() => {
 
-    console.log('School Load State Use Effect Called');
-    if(schoolLoadState == "") {
+    
+    if(!isSchoolDataLoaded.current) {
+      console.log('School Load State Use Effect Called');
+      isSchoolDataLoaded.current = true;  
       getSchoolData(); 
       return;
     }
-    setLoadStatus();
-  }, [schoolLoadState]);
+  });
 
   return (
     <div className="bg-white d-flex flex-grow-1 align-self-stretch w-100 h-100">
         <div className="container-fluid">
-          <Suspense fallback={<LoadSpinner />}>
-            <div className="pt-2">
-              <WorkContent employerData={jobData} />
-            </div>
-            <div className="pt-5">
-              <SchoolContent schoolData={schoolData} />            
-            </div>
-          </Suspense>
+          {
+            loadState === false && <LoadSpinner />
+          }
+          {
+            loadState == true &&             
+            <>
+              <div className="pt-2">
+                <WorkContent employerData={jobData} />
+              </div>
+              <div className="pt-5">
+                <SchoolContent schoolData={schoolData} />            
+              </div>            
+            </>
+          }
       </div>      
     </div>
   );
