@@ -7,8 +7,9 @@ const Sidebar = () => {
   return (
     <div
       id="sidebar"
-      className="sidebar offcanvas-xl offcanvas-start w-25 border-end shadow"
+      className="sidebar offcanvas-xl offcanvas-start w-25 border-end shadow sidebar_content"
     >
+      <div className="sticky h-20">
       <div className="h-20"></div>
       <div className="row">
         <div className="col">
@@ -29,6 +30,8 @@ const Sidebar = () => {
           <div className="fs-3 fst-italic py-1">Jim Banning</div>
           <div className="fs-5 py-1">North Texas C#/.NET Dev</div>
         </div>
+      </div>
+
       </div>
     </div>
   );

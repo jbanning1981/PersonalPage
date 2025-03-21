@@ -5,23 +5,26 @@
     "companyUrl": "https://parallon.com/",
     "roles": [
       {
-        "title": "Consulting Application Engineer",
-        "startDate": "2021-12-20",
+        "title": "Consulting Application Engineer - Applications Support",
+        "startDate": "2024-06-20",
         "endDate": "Present",
         "accomplishments": [
-          "",
-          "",
-          ""
+          "Create internal reports using C#, Dapper, and SQL to identify additional revenue opportunities and medical coding quality issues"
+          ,"Create gated check-ins and automated deployments for .NET 8 hosted applications"
+          ,""
         ]
       },
       {
-        "title": "Consulting Application Engineer",
+        "title": "Consulting Application Engineer - Applications Development",
         "startDate": "2021-12-20",
-        "endDate": "Present",
+        "endDate": "2024-06-20",
         "accomplishments": [
-          "Created DevOps pipelines for Dev/QA/Production, to include gated check-ins, unit tests, SQL DACPAC deployment and IIS deployment of .NET Core 5.0 Web application",
-          "Provided guidance to an offshore team of four on the development of an SMS, Email, and Agentless dialer campaign designed to increase appointment bookings for 142 facilities, with an average of 3000 SMS and Email per day",
-          "Served as a technical product manager, working with the business to develop guidelines, and creating user stories and documentation in JIRA and Confluence"
+          "Created Azure DevOps pipelines for Dev/QA/Production, to include gated check-ins, XUnit unit tests, SQL DACPAC deployment and IIS deployment of .NET Core 5.0 Web application."
+          ,"Served as a technical lead, providing guidance to an offshore team of four on the development of an SMS, email, and phone dialer campaign designed to increase patient appointment bookings for 162 HCA facilities, averaging 3000+ SMS/Emails per day. Additionally, created a migration plan to shift the application from on-premises IIS into an Azure Functions app utilizing blob storage and flat file ETL"
+          ,"Created GitHub YAML files for deploying a .NET 6 Azure Functions application into Azure"
+          ,"Provided technical support to resolve issues with an internal ASP.NET MVC website that was converted to .NET 5. Led efforts to fix issues with HTTP port exhaustion, SQL connection pooling issues, and resolving technical debt."
+          ,"Identified poor performing NHibernate queries and replaced them with async Dapper calls."
+          ,"Refactored legacy code to introduce async/await patterns, feature flags for testing new initiatives, and moved business logic out of controllers into reusable service classes."
         ]
       }]
   },
@@ -48,7 +51,7 @@
   },
   {
     "name": "Medical City Healthcare",
-    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/NTX_MedicalCityHealthcareNT_logoSVG.svg",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/medical_city_healthcare.png",
     "companyUrl": "https://medicalcityhealthcare.com/",
     "roles":[{
       "title": "Senior Web Developer",

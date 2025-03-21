@@ -1,7 +1,7 @@
 type job = {
     title: string
-    startDate: Date
-    endDate: Date
+    startDate: string
+    endDate: string
     accomplishments: string[]
 }
 
@@ -10,7 +10,7 @@ type companyEntry = {
     name: string
     logoUrl: string
     companyUrl: string
-    jobs: job[]    
+    roles: job[]    
 };
 
-export default companyEntry;
+export { companyEntry, job } 
