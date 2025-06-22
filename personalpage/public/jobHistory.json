@@ -10,8 +10,11 @@
         "endDate": "Present",
         "accomplishments": [
           "Create internal reports using C#, Dapper, and SQL to identify additional revenue opportunities and medical coding quality issues"
-          ,"Create gated check-ins and automated deployments for .NET 8 hosted applications"
-          ,""
+          ,"Create gated check-ins and branch protections for .NET 8 hosted applications"
+          ,"Created Azure DevOps deployment groups and release pipelines for internal self-hosted applications"
+          ,"Created SQL and PowerShell scripts for user extraction and Active Directory validation"
+          ,"Created Playwright data validation scripts using C#"
+          ,"Created SQL scripts to automate record creation, bypassing the default UI and reducing system configuration from hours to minutes"
         ]
       },
       {
