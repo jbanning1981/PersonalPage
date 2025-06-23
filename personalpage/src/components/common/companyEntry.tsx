@@ -13,4 +13,4 @@ type companyEntry = {
     roles: job[]    
 };
 
-export { companyEntry, job } 
+export type { companyEntry, job } 
