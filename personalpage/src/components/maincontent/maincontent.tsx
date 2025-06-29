@@ -4,7 +4,7 @@ import "../schoolcontent/schoolcontent";
 import "./maincontent.scss";
 import SchoolContent from "../schoolcontent/schoolcontent";
 import LoadSpinner from "../common/loadSpinner";
-import companyEntry from "../common/companyEntry";
+import { companyEntry } from "../common/companyEntry";
 import WorkContent from "../workcontent/workcontent";
 const MainContent = () => {
   
