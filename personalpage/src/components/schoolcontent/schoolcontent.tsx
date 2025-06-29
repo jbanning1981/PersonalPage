@@ -12,7 +12,7 @@ const SchoolContent = ({
     <>
       {schoolData.length > 0 && (
         <>
-          <div className="card section-border rounded p-0">
+          <div className="card section-border rounded p-0 shadow">
             <div className="fs-2 card-header">Education</div>
             <div className="card-body">
               {schoolData.map((s,idx) => {

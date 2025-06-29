@@ -15,7 +15,6 @@ const WorkContent = ({
   const formatter = new Intl.DateTimeFormat(navigator.language, dateOptions);
 
   const showTimeAtCompany = (c: companyEntry) => {
-    console.log(c.name);
     let startDate = new Date("2099-01-01");
     let endDate = new Date("1900-01-02");
     let isCurrentEmployer = false;
@@ -58,16 +57,15 @@ const WorkContent = ({
   return (
     <>
       {employerData.length > 0 && (
-        <>
-          <div className="card section-border rounded p-0">
+
+          <div className="card section-border rounded p-0 shadow">
             <div className="fs-2 card-header">Work History</div>
             <div className="card-body">
               {employerData.map((s, idx) => {
                 return (
-                  <>
+                  <div key={"work-" + idx}>
                     <div
                       className="row align-items-start pb-4"
-                      key={"work-" + idx}
                     >
                       <div className="d-none d-md-block col-auto">
                         <img
@@ -87,9 +85,9 @@ const WorkContent = ({
                           </div>
                         </div>
                         {/* <div className="mb-1 content-title">{showTimeAtCompany(s)}</div> */}
-                        {s.roles.map((r) => {
+                        {s.roles.map((r, ridx) => {
                           return (
-                            <div className="ps-2">
+                            <div className="ps-2" key={"work-"+idx+"-role"+ridx}>
                               
                               <div className="py-1">
                                 <div className="h6">{r.title}</div>
@@ -98,8 +96,8 @@ const WorkContent = ({
                               </div>
                               <div>
                                 <ul>
-                                  {r.accomplishments.map((a) => {
-                                    return <li className="py-1">{a}</li>;
+                                  {r.accomplishments.map((a,aidx) => {
+                                    return <li className="py-1" key={"work-"+idx+"-role"+ridx+"-bp-"+aidx}>{a}</li>;
                                   })}
                                 </ul>
                               </div>
@@ -108,12 +106,12 @@ const WorkContent = ({
                         })}
                       </div>
                     </div>
-                  </>
+                  </div>
                 );
               })}
             </div>
           </div>
-        </>
+
       )}
     </>
   );

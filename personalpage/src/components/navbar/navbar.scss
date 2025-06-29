@@ -1,13 +1,21 @@
 @import "bootstrap/scss/bootstrap";
 
 .navbar {
-    background: $blue-800;
+  background: $blue-800;
 }
 
 .navbar-brand img {
-    height: 60px;
+  height: 60px;
 }
 
 .navbar-footer {
-    background-color: #00387bb3;
+  background-color: #00387bb3;
+}
+
+@media (max-width: 992px) {
+  .custom-sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
 }

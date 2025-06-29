@@ -12,9 +12,10 @@
           "Create internal reports using C#, Dapper, and SQL to identify additional revenue opportunities and medical coding quality issues"
           ,"Create gated check-ins and branch protections for .NET 8 hosted applications"
           ,"Created Azure DevOps deployment groups and release pipelines for internal self-hosted applications"
-          ,"Created SQL and PowerShell scripts for user extraction and Active Directory validation"
-          ,"Created Playwright data validation scripts using C#"
-          ,"Created SQL scripts to automate record creation, bypassing the default UI and reducing system configuration from hours to minutes"
+          ,"Created Web UI application validation tool using Playwright"
+          ,"Created T-SQL queries with CTEs and temp tables for data reporting to detect missed revenue opportunities. Created T-SQL scripts to eliminate repetitive manual web UI data insertion tasks during installation."
+          ,"Create configuration comparison tool using .NET 8, Dapper, and T-SQL to detect data inconsistencies by comparing 15 SQL tables between software installations and generating an Excel report with OpenXML."
+          ,"Create .NET 8 applications for scheduled reporting and email with Windows Task Scheduler"
         ]
       },
       {
