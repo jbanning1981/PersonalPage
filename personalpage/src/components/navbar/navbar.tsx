@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="d-flex ms-lg-auto px-2 d-xl-none">
           <ul className="navbar-nav flex-row">
             <li className="nav-item px-1 px-lg-0">
-              <a className="nav-link text-white" href="https://linkedin.com" target="_blank">
+              <a className="nav-link text-white" href="https://linkedin.com/in/jimbanning" target="_blank">
                 <FontAwesomeIcon className="fa-2xl" icon={faLinkedin} />
               </a>
             </li>

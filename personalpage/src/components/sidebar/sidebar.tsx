@@ -33,7 +33,7 @@ const Sidebar = () => {
         </div>
         <div className="row">
           <div className="col text-center">
-            <a className="p-2 sidebar-link" href="https://linkedin.com" target="_blank">
+            <a className="p-2 sidebar-link" href="https://linkedin.com/in/jimbanning" target="_blank">
               <span className="text-decoration-underline pe-2">Find me on LinkedIn</span>
               <FontAwesomeIcon className="fa-2xl" icon={faLinkedin} />
             </a>
