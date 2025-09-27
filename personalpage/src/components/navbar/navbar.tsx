@@ -15,15 +15,21 @@ const Navbar = () => {
           />
         </div>
 
-        <div className="d-flex fs-3 d-xl-none">
+        <div className="d-flex fs-xl-3 d-xl-none">
           <div className="text-center">
-            Jim Banning - North Texas C#/.NET Dev
+            <span className="">Jim Banning</span><span className="d-none d-md-inline"> - </span><span>North Texas C#/.NET Dev</span>
           </div>
         </div>
         <div className="d-flex ms-lg-auto px-2 d-xl-none">
           <ul className="navbar-nav flex-row">
             <li className="nav-item px-1 px-lg-0">
-              <a className="nav-link text-white" href="https://linkedin.com/in/jimbanning" target="_blank">
+              <a
+                className="nav-link text-white"
+                href="https://linkedin.com/in/jimbanning"
+                target="_blank"
+                rel="noopener"
+                title="Jim Banning on LinkedIn"
+              >
                 <FontAwesomeIcon className="fa-2xl" icon={faLinkedin} />
               </a>
             </li>

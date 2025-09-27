@@ -22,7 +22,7 @@ const MainContent = () => {
 
   const setLoadStatus = () => {
     if(isSchoolDataLoaded && isJobDataLoaded) {
-      console.log('Setting Load State');
+      ('Setting Load State');
       setLoadState(true);
     }
   };
@@ -82,7 +82,6 @@ const MainContent = () => {
           console.error(error); 
         }
       });
-      console.log(jobJsonData);
       setJobData(jobJsonData);
       setLoadStatus();
     } catch (error) {
@@ -95,9 +94,9 @@ const MainContent = () => {
 
 
   useEffect(() => {
-    console.log(isJobDataLoaded.current);
+    
     if(!isJobDataLoaded.current) {
-      console.log('Job Load State Use Effect Called');     
+       
       isJobDataLoaded.current = true;
       getJobData(); 
       return;
@@ -108,7 +107,7 @@ const MainContent = () => {
 
     
     if(!isSchoolDataLoaded.current) {
-      console.log('School Load State Use Effect Called');
+      
       isSchoolDataLoaded.current = true;  
       getSchoolData(); 
       return;
