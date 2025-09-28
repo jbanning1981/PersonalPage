@@ -32,7 +32,7 @@ const WorkContent = ({
           startDate = roleStartDate;
         }
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     });
 
@@ -70,6 +70,7 @@ const WorkContent = ({
                       <div className="d-none d-md-block col-auto">
                         <img
                           src={s.logoUrl}
+                          alt={s.name + " logo"}
                           className="object-fit-fill square-image"
                         />
                       </div>

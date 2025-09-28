@@ -7,11 +7,7 @@ function App() {
   return (
     <div className="d-flex flex-column w-100">
       <Navbar></Navbar>
-      <div>
-        <div className="container-fluid navbar-footer">
-          <span className="p-1"></span>
-        </div>
-      </div>
+
       <div className="d-flex flex-fill">
         <Sidebar></Sidebar>
         <MainContent></MainContent>
