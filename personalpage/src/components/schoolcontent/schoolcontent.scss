@@ -1,0 +1,13 @@
+@import "../../App.scss";
+@import "bootstrap/scss/bootstrap";
+
+
+.content-title {
+    color: #052c65;
+    border-bottom: 2px solid #052c65;
+}
+
+.card-body {
+    background-color: $gray-100;
+    
+}

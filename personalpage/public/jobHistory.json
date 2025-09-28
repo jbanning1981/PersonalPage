@@ -1,0 +1,133 @@
+[
+  {
+    "name": "Parallon",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/Parallon_New_Logo.jpg",
+    "companyUrl": "https://parallon.com/",
+    "roles": [
+      {
+        "title": "Consulting Application Engineer - Applications Support",
+        "startDate": "2024-06-20",
+        "endDate": "Present",
+        "accomplishments": [
+          "Create internal reports using C#, Dapper, and SQL to identify additional revenue opportunities and medical coding quality issues"
+          ,"Create gated check-ins and branch protections for .NET 8 hosted applications"
+          ,"Created Azure DevOps deployment groups and release pipelines for internal self-hosted applications"
+          ,"Created Web UI application validation tool using Playwright"
+          ,"Created T-SQL queries with CTEs and temp tables for data reporting to detect missed revenue opportunities. Created T-SQL scripts to eliminate repetitive manual web UI data insertion tasks during installation."
+          ,"Create configuration comparison tool using .NET 8, Dapper, and T-SQL to detect data inconsistencies by comparing 15 SQL tables between software installations and generating an Excel report with OpenXML."
+          ,"Create .NET 8 applications for scheduled reporting and email with Windows Task Scheduler"
+        ]
+      },
+      {
+        "title": "Consulting Application Engineer - Applications Development",
+        "startDate": "2021-12-20",
+        "endDate": "2024-06-20",
+        "accomplishments": [
+          "Created Azure DevOps pipelines for Dev/QA/Production, to include gated check-ins, XUnit unit tests, SQL DACPAC deployment and IIS deployment of .NET Core 5.0 Web application."
+          ,"Served as a technical lead, providing guidance to an offshore team of four on the development of an SMS, email, and phone dialer campaign designed to increase patient appointment bookings for 162 HCA facilities, averaging 3000+ SMS/Emails per day. Additionally, created a migration plan to shift the application from on-premises IIS into an Azure Functions app utilizing blob storage and flat file ETL"
+          ,"Created GitHub YAML files for deploying a .NET 6 Azure Functions application into Azure"
+          ,"Provided technical support to resolve issues with an internal ASP.NET MVC website that was converted to .NET 5. Led efforts to fix issues with HTTP port exhaustion, SQL connection pooling issues, and resolving technical debt."
+          ,"Identified poor performing NHibernate queries and replaced them with async Dapper calls."
+          ,"Refactored legacy code to introduce async/await patterns, feature flags for testing new initiatives, and moved business logic out of controllers into reusable service classes."
+        ]
+      }]
+  },
+  {
+    "name": "Match Group",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/Match_Group_Logo.jpg",
+    "companyUrl": "https://mtch.com/",
+    "roles": [
+      {
+        "title": "Senior Engineer I (API)",
+        "startDate": "2020-12-07",
+        "endDate": "2021-12-10",
+    
+        "accomplishments": [
+          "Created WebAPI endpoints using .NET 4.6.2, Dapper ORM, C#, and TinyIoC for Dependency Injection.",
+          "Assist in conversion of .NET 4.6.2 application to .NET 5,",
+          "Use Windows Job/Task to generate push notification content and publish to Kafka",
+          "Create unit tests using XUnit and FakeItEasy, and API tests using Postman.",
+          "Implemented a Games API endpoint that pulled content from a microservice, and saved responses to SQL server",
+          "Create T-SQL tables, types, and stored procedures for saving and loading user data."
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Medical City Healthcare",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/medical_city_healthcare.png",
+    "companyUrl": "https://medicalcityhealthcare.com/",
+    "roles":[{
+      "title": "Senior Web Developer",
+      "startDate": "2017-10-20",
+      "endDate": "2020-12-04",
+  
+      "accomplishments": [
+        "Worked with a team to develop an Azure hosted .NET Core 2.2 backend for an iOS HealthKit application to allow physicians to monitor patients.",
+        "Integrated Azure Key Vault for storing Application Secrets, with Managed Service Identity to register apps in Azure AD and set access permissions.",
+        "Implemented IdentityServer4 to handle JWT access and refresh tokens. Used IdentityServer and PingFederated as JWT providers to secure Azure APIs using .NET Core Security Policies.",
+        "Integrated SendGrid and Twilio for SMS 2FA and password resets for patient facing iOS app, and Azure Notification Hub for Apple Push Notifications.",
+        "Created unit tests with MSTest, XUnit, Moq, and In-Memory EF DBContexts.",
+        "Implemented Azure Functions with message queues for processing HealthKit data, importing patient files from Azure Blob Storage, and on-prem to Azure DB ETL",
+        "Created CI/CD workflows with gated check-ins to master branch, and automated Continuous Deployment of SQL DACPAC and Web applications to Azure, using JSON variable substitution to deliver environment specific settings for each deployment environment.",
+        "Create Proof of Concept site to convert legacy NET 4.6 apps to .NET Core 3.1 with a VueJS frontend as a replacement for standard jQuery / MVC",
+        "Created ASP.NET MVC websites with Windows Authentication for tracking of PPE item delivery, available COVID beds, and nurse staffing levels for Medical City hospitals during COVID-19",
+        "Created backend email notification system to pull bed information from MEDITECH BMAC, and send email alerts if beds remained dirty, decreasing patient wait time for available beds."
+      ]
+    }]
+  },
+  {
+    "name": "Inmar",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/Inmar_Logo.png",
+    "companyUrl": "https://www.inmar.com/",
+    "roles":[{
+      "title": ".NET Application Developer",
+      "startDate": "2015-03-17",
+      "endDate": "2017-07-07",
+      "accomplishments": [
+        "Created Repository classes and ASP.NET UI using Bootstrap CSS, HTML5, MVC6, and .NET Core 1.1 that allowed users to navigate and save files to Azure, SharePoint, or File Systems",
+        "Create SSIS Packages to load client flat file information into SQL Server",
+        "Worked with senior developers to migrate an existing VB.NET Webforms application to AngularJS SPA with ASP.NET MVC, Entity Framework, Telerik Kendo UI and C# Web API controllers.",
+        "Created SQL tables, triggers, indexes, and stored procedures.",
+        "Created automated UI tests with Selenium Webdriver."
+      ]
+    }]
+
+
+
+  },
+  {
+    "name": "Interface People, LLP",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/IPeople_Logo.jpg",
+    "companyUrl": "https://www.ipeople.com/",    
+    "roles":[{
+      "title": "Developer",
+      "startDate": "2014-01-27",
+      "endDate": "2015-03-13",
+  
+      "accomplishments": [
+        "Assisted in development of ASP.NET MVC3 and WebForms Web Applications with VB.NET, Bootstrap CSS, jQuery, and EF 4.1",
+        "Rewrote data access functions with Entity Framework, LINQ-to-Entities, and LINQ-to-SQL",
+        "Assisted senior developers on AES/DES/3DES querystring encryption",
+        "Assisted in SSRS report creation and stored procedure updates."
+      ]
+    }]
+
+  },
+  {
+    "name": "Schneider Electric",
+    "logoUrl": "https://jbanning1981.blob.core.windows.net/assets/Schneider_Electric_Logo.jpg",
+    "companyUrl": "https://www.se.com/us/en/",
+    "roles":[{
+      "title": "Programmer Analyst",
+      "startDate": "2012-11-19",
+      "endDate": "2014-01-22",
+  
+      "accomplishments": [
+        "Designed user interface for SCADA pipeline operators using ADO.NET and VB.NET",
+        "Developed T-SQL queries and reports for presenting historical SCADA information.",
+        "Converted PERL scripted reports to SSRS reports on pipeline and tank information."
+      ]
+    }]
+  }
+]

@@ -1,0 +1,77 @@
+@import "bootstrap/scss/bootstrap";
+
+.pt-neg10 {
+    margin-top:-50px;
+}
+
+.border.rounded-circle.inner-spin {
+    border-color: $indigo-600 !important;
+
+    border-width: 10px !important;
+    border-left-style: double !important;    
+    border-right-style: double !important;        
+    //border-top-color:transparent !important;
+    border-top-style:solid;
+    //border-bottom-color:transparent !important;  
+    border-bottom-style:solid;    
+}
+
+div.border.rounded-circle.middle-spin {
+    border-color: $blue-600 !important;
+    border-width: 10px !important;    
+}
+
+.border.rounded-circle.outer-spin {
+    border-color: $blue-600 !important;
+    border-width: 10px !important;
+    border-style:  double !important;          
+}
+
+.border.rounded-circle.core {
+    border-color: $indigo-600 !important;
+    border-width: 10px !important;
+    background: $indigo-600;
+}
+
+/*animate need to be defined first*/
+@mixin animate($animation,$duration,$method,$times){
+    animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}
+
+.pulse {
+    @include keyframes(pulse){
+        0%,100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.25;
+        }        
+     }
+   @include animate(pulse, 2s, linear, infinite);    
+}
+
+.indigo-border-pulse {
+    @include keyframes(border-pulse){
+        0%,100% {
+            border-color: rgba(82, 13, 194, 1) !important;
+        }
+        50% {
+            border-color: rgba(82, 13, 194, 0) !important;
+        }        
+     }
+   @include animate(border-pulse, 2s, linear, infinite);    
+}
+
+
+ .spinner{ 
+    @include keyframes(spin){
+        to { transform: rotate(360deg)  }
+     }
+   @include animate(spin, 6s, linear, infinite);
+ } 

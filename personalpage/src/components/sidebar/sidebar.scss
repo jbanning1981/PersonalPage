@@ -1,0 +1,30 @@
+@import "bootstrap/scss/bootstrap";
+
+.h-20 {
+    height: 20%;
+}
+
+.sidebar_content {
+    //background-color: #ebebeb;
+    background: $gray-400 !important;
+}
+
+div.sticky {
+    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+
+
+#sidebarPortrtaitWrapper {
+    background-color: $white;
+}
+
+#sidebarPortraitOuterWrapper {
+    background-color: $blue-800;
+}
+
+.sidebar-link, .sidebar-link:hover {
+    color: $blue-800;
+}
