@@ -20,7 +20,7 @@ const SchoolContent = ({
                 return (
                   <div className="row align-items-start pb-4" key={schoolKey}>
                     <div className="d-none d-md-block col-auto">
-                      <img src={s.logoUrl} className="object-fit-fill" />
+                      <img src={s.logoUrl} className="object-fit-fill" alt={s.name + ' logo'} />
                     </div>
                     <div className="col">
                       <div className="mb-1 content-title">
