@@ -1,35 +1,40 @@
-# Personal Page
+# personalpage
 
-- This started as basic app to learn Angular. However, the market in 2024 is very React heavy, so I'm going back to update this, just in React.
+React 19 + TypeScript + Vite, styled with Bootstrap 5 (Sass).
 
+## Commands
 
-# React + TypeScript + Vite
+| Command           | What it does                                          |
+| ----------------- | ----------------------------------------------------- |
+| `npm run dev`     | Dev server with hot reload at http://localhost:5173   |
+| `npm run build`   | Type-check, build and pre-render to `dist/personalpage` |
+| `npm run preview` | Serve the production build locally                    |
+| `npm run lint`    | ESLint                                                |
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How the page is built
 
-Currently, two official plugins are available:
+The site is pre-rendered, so the published `index.html` contains the full page
+content. Search engines, link previews and AI tools can read it without running
+JavaScript. `npm run build` does this in three steps:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. `vite build`: the normal client bundle (`src/entry-client.tsx`).
+2. `vite build --ssr src/entry-server.tsx`: a Node bundle that can render `<App />` to a string.
+3. `node prerender.js`: renders the app and writes the HTML into
+   `dist/personalpage/index.html` in place of `<!--app-html-->`.
 
-## Expanding the ESLint configuration
+In the browser, React then *hydrates* that HTML (attaches to it) instead of building
+the page from scratch.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Editing content
 
-- Configure the top-level `parserOptions` property like this:
+- Work history: `src/data/jobHistory.json`
+- Education: `src/data/schoolHistory.json`
+- Name, headline and links: `profile` in `src/data/index.ts`
+- Page title, description and link-preview tags: `index.html`
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Dates are ISO (`yyyy-mm-dd`). Use `"Present"` as the `endDate` of a current role.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Deploying
+
+Run the **Manually Publish Azure Static Web App** workflow in GitHub Actions.
+Headers, caching and the 404 page are configured in `public/staticwebapp.config.json`.
