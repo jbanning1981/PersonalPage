@@ -1,0 +1,53 @@
+name: Update screenshot baselines
+
+# Add the "update-screenshots" label to a pull request to regenerate the Playwright
+# screenshot baselines in the same Linux container CI uses, and commit them to the
+# PR branch. Use it when the page is meant to look different.
+#
+# Commits made by this workflow do not start CI themselves (a GitHub rule for
+# GITHUB_TOKEN), so afterwards pull the branch and push a commit to re-run the checks,
+# for example: git pull && git commit --allow-empty -m "Re-run checks" && git push
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  update:
+    if: github.event.label.name == 'update-screenshots'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    container:
+      image: mcr.microsoft.com/playwright:v1.64.1-noble
+      options: --user 1001
+    defaults:
+      run:
+        working-directory: personalpage
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref }}
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright test --grep "visual baseline" --update-snapshots
+
+      - name: Commit updated baselines
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add e2e/__screenshots__
+          if git diff --cached --quiet; then
+            echo "Screenshots are already up to date."
+          else
+            git commit -m "Update screenshot baselines"
+            git push
+          fi
+
+      - name: Remove the label
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          curl -sS -X DELETE -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/labels/update-screenshots"

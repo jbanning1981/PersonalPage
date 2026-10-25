@@ -6,7 +6,7 @@ import tseslint from "typescript-eslint";
 import { defineConfig, globalIgnores } from "eslint/config";
 
 export default defineConfig([
-  globalIgnores(["dist"]),
+  globalIgnores(["dist", "playwright-report", "test-results"]),
   {
     files: ["**/*.{ts,tsx}"],
     extends: [
@@ -20,7 +20,7 @@ export default defineConfig([
     },
   },
   {
-    files: ["prerender.js"],
+    files: ["prerender.js", "scripts/**/*.js"],
     extends: [js.configs.recommended],
     languageOptions: {
       globals: globals.node,
