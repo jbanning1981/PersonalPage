@@ -1,0 +1,26 @@
+.h-20 {
+  height: 20%;
+}
+
+.sidebar-content {
+  flex: 0 0 20%;
+  background: var(--page-gray);
+}
+
+div.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.portrait-inner {
+  background-color: #fff;
+}
+
+.portrait-outer {
+  background-color: var(--brand-blue);
+}
+
+.sidebar-link,
+.sidebar-link:hover {
+  color: var(--brand-blue);
+}

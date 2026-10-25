@@ -2,15 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="public/favicon-32x32.png" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jim Banning - North Texas .NET Developer</title>
+    <title>Jim Banning - North Texas C#/.NET Developer</title>
+    <meta name="description" content="Jim Banning is a C#/.NET software developer in North Texas. Work history, accomplishments and education." />
+    <link rel="canonical" href="https://jimbanning.com/" />
+    <meta name="theme-color" content="#052c65" />
+
+    <!-- Link previews (LinkedIn, Slack, Teams, etc.) -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://jimbanning.com/" />
+    <meta property="og:title" content="Jim Banning - North Texas C#/.NET Developer" />
+    <meta property="og:description" content="Work history, accomplishments and education for Jim Banning, a C#/.NET software developer in North Texas." />
+    <meta property="og:image" content="https://jimbanning.com/portrait.png" />
+    <meta property="og:image:alt" content="Portrait of Jim Banning" />
+    <meta property="profile:first_name" content="Jim" />
+    <meta property="profile:last_name" content="Banning" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>    
-    <div id="root" class="d-flex flex-grow-1"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>        
+    <!-- prerender.js replaces the comment below with the rendered page at build time. -->
+    <div id="root"><!--app-html--></div>
+    <script type="module" src="/src/entry-client.tsx"></script>
   </body>
 </html>

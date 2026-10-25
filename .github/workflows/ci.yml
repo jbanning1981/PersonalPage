@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  # Lint, type-check, unit tests, build, and the pre-render check (last step of the build).
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: personalpage
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: personalpage/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+
+  # Browser tests: hydration/console errors, accessibility (axe) and visual comparison.
+  # The image version must match @playwright/test in package.json, and the screenshot
+  # baselines in e2e/__screenshots__ were generated in this image.
+  e2e:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.64.1-noble
+      options: --user 1001
+    defaults:
+      run:
+        working-directory: personalpage
+    steps:
+      - uses: actions/checkout@v5
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright test
+      - name: Upload test report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            personalpage/playwright-report
+            personalpage/test-results
+          retention-days: 14
